@@ -1,7 +1,12 @@
 // to controll many users
+
 module.exports.profile=function(req,res){
-  res.end("<h1>User Profile</h1>")  ;
+  return res.render("profile",{
+      title:"profile"
+  })
+  
 }
+
 
 
 // now this controller is ready to get accessed by a router
