@@ -1,8 +1,18 @@
 const express =  require("express");
 const app=express();
+const cookieParser=require("cookie-parser")
+
 const port=8000;
 const expressLayouts=require("express-ejs-layouts")
 
+//importing mongoose modules
+const db=require("./config/mongoose")
+
+//reading through posts requests
+app.use(express.urlencoded());
+
+// when the req comes cookie needs to be parsed in middleware
+app.use(cookieParser());
 
 
 

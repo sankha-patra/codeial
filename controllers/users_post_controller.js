@@ -1,12 +1,12 @@
 // to controll many users
 //console.log("router loaded for usersposts")
 
-module.exports.posts=function(req,res){
-  return res.render("posts",{
-      title:"posts"
-  })
+// module.exports.posts=function(req,res){
+//   return res.render("posts",{
+//       title:"posts"
+//   })
   
-}
+// }
   // module.exports.posts=function(req,res){
   //   console.log("router loaded for usersposts")
   //      return res.end("<h1>User Posts</h1>");
