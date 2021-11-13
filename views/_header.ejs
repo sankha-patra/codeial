@@ -5,15 +5,27 @@
         <!-- //if user is present -->
         <li><p>Name:<%= user.name %></p></li>
 
-        <form action="/users/sign-out" method="get"></form>
-        <input type="submit" value="Sign-Out"></input>
+        <form action="/users/sign-out" method="get">
+            <input type="submit" value="Sign Out"></input>
+        </form>
+        
 
 
         <!-- <li><a href="/users/sign-out">Sign Out</a></li> -->
         <% } else {%>
             
-            <li><a href="/users/sign-in">Sign In</a></li>
-            <li><a href="/users/sign-up">Sign Up</a></li>
+            <li>
+                <form action="/users/sign-in" method="get">
+                    <input type="submit" value="Sign In"></input>
+                </form>
+            </li>
+            <li>
+                <form action="/users/sign-up" method="get">
+                    <input type="submit" value="Sign Up"></input>
+                </form>
+            </li>
+            <!-- <li><a href="/users/sign-in">Sign In</a></li>
+            <li><a href="/users/sign-up">Sign Up</a></li> -->
 
             <% }%>
 
