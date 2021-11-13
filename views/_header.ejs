@@ -1,3 +1,21 @@
 <header>
     Page reader
+    <ul>
+        <% if (locals.user) {%>
+        <!-- //if user is present -->
+        <li><p>Name:<%= user.name %></p></li>
+
+        <form action="/users/sign-out" method="get"></form>
+        <input type="submit" value="Sign-Out"></input>
+
+
+        <!-- <li><a href="/users/sign-out">Sign Out</a></li> -->
+        <% } else {%>
+            
+            <li><a href="/users/sign-in">Sign In</a></li>
+            <li><a href="/users/sign-up">Sign Up</a></li>
+
+            <% }%>
+
+    </ul>
 </header>
