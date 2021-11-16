@@ -6,7 +6,7 @@ const User = require("../models/user")
 // for rendering profile page
 module.exports.profile=function(req,res){
   return res.render("profile",{
-      title:"profile"
+      title:"Profile-Page"
   })
   
 }
@@ -14,7 +14,7 @@ module.exports.profile=function(req,res){
 //for rendering posts page
 module.exports.posts=function(req,res){
   return res.render("posts",{
-      title:"posts"
+      title:"Posts"
   })
   
 }

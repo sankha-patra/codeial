@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 mongoose.connect("mongodb://localhost/codeial_development")
 const db=mongoose.connection;
-const url="mongodb://localhost/codeial_development";
+
 
 // whenever there is an error in connecting to the dataabase
 db.on("error",console.error.bind(console,"Error connecting to mongo db"));

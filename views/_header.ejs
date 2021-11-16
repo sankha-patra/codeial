@@ -1,33 +1,89 @@
+<!-- <link rel="stylesheet" href="/css/header.css"> -->
+<!-- <link rel="stylesheet" href="/css/styles.css"> -->
+<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 <header>
-    Page reader
-    <ul>
-        <% if (locals.user) {%>
-        <!-- //if user is present -->
-        <li><p>Name:<%= user.name %></p></li>
+    <!-- <link rel="stylesheet" href="layout.css"> -->
+    <!-- <h1><%=title %></h1> -->
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page Header -->
+    <div class="header" >
+        <ul>
+            <% if (locals.user) {%>
+    
+                <nav class="navbar">
+                    <p class="webname">
+                        <i class="far fa-eye "></i>
+                        Codeial</p>
+                    <!-- <i class="far fa-eye fa-2x"></i>
+                     <img class="navbar_bars" src="/images/slack.png" alt=""> -->
+                    <!-- Codeial  -->
+                   
 
-        <form action="/users/sign-out" method="get">
-            <input type="submit" value="Sign Out"></input>
-        </form>
-        
-
-
-        <!-- <li><a href="/users/sign-out">Sign Out</a></li> -->
-        <% } else {%>
+                    <h1><%=title %></h1>
+                    <div class="navbar_bars">
+                        <!-- <h1><%=title %></h1> -->
+                        <!-- <i class="fas fa-bars"></i> -->
+                        <div class="navbar_menu">
+                            <a href="/users/profile" class="navbar_menu--links">Profile</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/users/posts" class="navbar_menu--links">Posts</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/users/sign-out" class="navbar_menu--links">Sign-Out</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             User:<%= user.name %>
+                            <!-- <li><p>Email:<%= user.email %></p></li> -->
+    
+                         </div>
+                    </div>
+                 </nav> 
             
-            <li>
-                <form action="/users/sign-in" method="get">
-                    <input type="submit" value="Sign In"></input>
-                </form>
-            </li>
-            <li>
-                <form action="/users/sign-up" method="get">
-                    <input type="submit" value="Sign Up"></input>
-                </form>
-            </li>
-            <!-- <li><a href="/users/sign-in">Sign In</a></li>
-            <li><a href="/users/sign-up">Sign Up</a></li> -->
-
-            <% }%>
-
-    </ul>
+    
+            <!-- <li><p>Name:<%= user.name %></p></li>
+            <li><p>Email:<%= user.email %></p></li> -->
+    
+            
+            
+    
+    
+            <!-- <li><a href="/users/sign-out">Sign Out</a></li> -->
+            <% }else {%>
+                 <!-- navbar section -->
+            <nav class="navbar">
+                <!-- <i class="far fa-eye"></i> -->
+                
+                Codeial
+                <div class="navbar_bars">
+                    <i class="fas fa-bars"></i>
+                    <div class="navbar_menu">
+                        <!-- <form action="/users/sign-in" method="get">
+                            <input type="submit" value="Sign In"></input>
+                        </form>
+    
+                        <form action="/users/sign-up" method="get">
+                            <input type="submit" value="Sign Up"></input>
+                        </form> -->
+                        
+    
+                    </div>
+                </div>
+             </nav>
+    
+                <!-- <li>
+                    <form action="/users/sign-in" method="get">
+                        <input type="submit" value="Sign In"></input>
+                    </form>
+                </li>
+                <br>
+                <li>
+                    <form action="/users/sign-up" method="get">
+                        <input type="submit" value="Sign Up"></input>
+                    </form>
+                </li> -->
+                <!-- <li><a href="/users/sign-in">Sign In</a></li>
+                <li><a href="/users/sign-up">Sign Up</a></li> -->
+    
+                <% }%>
+    
+        </ul>
+    </div>
+    
 </header>

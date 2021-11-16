@@ -17,8 +17,16 @@ const passportLocal =  require("./config/passport-local-stratergy")
 // const MongoStore=require("connect-mongo")(session)
 const MongoStore=require("connect-mongo")
 const url="mongodb://localhost/codeial_development";
+const sassMiddleware = require("node-sass-middleware")
 
 
+app.use(sassMiddleware({
+    src:"./assets/scss",
+    dest:"./assets/css",
+    debug:true,
+    outputStyle:"extended",
+    prefix:"/css"
+}));
 //reading through posts requests
 app.use(express.urlencoded());
 

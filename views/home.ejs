@@ -1,3 +1,45 @@
+<!-- <link rel="stylesheet" href="/css/header.css"> -->
+<!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <!-- <h1><%=title %></h1> -->
+   <!-- <% if(!locals.user){%> -->
+        <!-- <form action="/users/sign-in" method="get">
+            <input type="submit" value="Sign In"></input>
+        </form>
 
-    <h1>Codeial /<%=title %></h1>
+        <form action="/users/sign-up" method="get">
+            <input type="submit" value="Sign Up"></input>
+        </form>  -->
+
+    <!-- <%}%> -->
+
+     
+
+<div class="hero" >
+
+    <div class="hero__container">
+      <div class="hero__container--left">
+        <h1>Social media website</h1>
+        <h2>Created by Sankha</h2>
+        <p>Sign up now to join the list.</p>
+        <!-- <button class="hero__container--btn"><a href="#">Sign Up</a></button> -->
+        <!-- <p>Sign up now to join the list.</p> -->
+
+        <% if (!locals.user) {%>
+          <button class="hero__container--btn"><a href="/users/sign-up">Sign Up</a></button>
+          <button class="hero__container--btn"><a href="/users/sign-in">Sign In</a></button>
+       <% } else {%>
+        <button class="hero__container--btn"><a href="/users/sign-out">Sign Out</a></button>
+
+        <% }%>
+        <!-- <a href="/users/sign-up" class="navbar__menu--links" id="button">Sign Up</a> -->
+      </div>
+      <div class="hero__container--right">
+        <img
+          src="images/img-2.svg"
+          alt="alien"
+          class="hero__container--img"
+        />
+      </div>
+    </div>
+
    

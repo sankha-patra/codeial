@@ -1,14 +1,64 @@
-<h1>Sign up</h1>
+
+<link rel="stylesheet" href="/css/loginform.css">
+<!-- <p class="webname">Codeial</p> -->
+<p class="webname">
+    <i class="far fa-eye "></i>
+    Codeial</p>
 
 <!-- //remember to create an action for the route entered -->
 <!-- in form you use post method so in route use post method not get -->
-<form action="/users/create" method="POST">
-    <input type="text" name="name" placeholder="Your name" required autofocus>
-    <input type="email" name="email" placeholder="Your email" required autofocus>
-    
-    <input type="password" name="password" placeholder="Password" required autofocus>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required autofocus>
-    <input type="submit" value="Sign-up"></input>
-</form>
+
+<div class="container">
+    <h1>Sign up</h1>
+    <form action="/users/create" method="POST">
+        <div class="form-control">
+            <input type="text" name="name" 
+            placeholder="Name"
+            required autofocus>
+            <!-- <label>Name</label> -->
+        </div>
+        <div class="form-control">
+
+            <input type="email" name="email" 
+            placeholder="Email"
+            required autofocus>
+            <!-- <h3>Email</h3> -->
+            <!-- <label>Email</label> -->
+            
+        </div>
+        <div class="form-control">
+            <input type="password" name="password" 
+            placeholder="Password"
+             required autofocus>
+             <!-- <label>password</label> -->
+  
+        </div>
+        <div class="form-control">
+            <input type="password" name="confirm_password"
+            placeholder="Confirm Password"
+             
+             required autofocus>
+             <!-- <label>Confirm Password</label> -->
+
+        </div>
+        <!-- <input type="text" name="name" placeholder="Your name" required autofocus>
+        <input type="email" name="email" placeholder="Your email" required autofocus>
+        
+        <input type="password" name="password" placeholder="Password" required autofocus>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required autofocus> -->
+        <input class="btn"type="submit" value="Sign-up"></input>
+    </form>
+
+</div>
+<script src="script.js"></script>
 
 
+
+<!-- <label >
+    <span style="transition-delay: 0ms;">E</span>
+    <span style="transition-delay: 50ms;">m</span>
+    <span style="transition-delay: 100ms;">a</span>
+    <span style="transition-delay: 150ms;">i</span>
+    <span style="transition-delay: 200ms;">l</span>
+
+</label> -->

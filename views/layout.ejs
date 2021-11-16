@@ -8,13 +8,34 @@
 
     </title>
     <link rel="stylesheet" href="/css/layout.css">
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <%- style %>
 </head>
+<% if(locals.user){%>
+    <% %><body style="background-color: #fbf2d5;"></body>
+        <%}%>
 <body>
+
+
+    <% if(locals.user){%>
     <%- include("_header"); %>
+        <%}%>
+    
+
     
     <%- body %>
-    <%- include("_footer"); %>
+
+
+    <% if(locals.user){%>
+        <%- include("_footer"); %>
+            <%}%>
+
+    
 
     <%- script %>
     
