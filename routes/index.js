@@ -16,6 +16,10 @@ router.use('/users',require('./users'));
 //router.get("/profile",usersController.profile)
 
 
+//for posts
+router.use('/posts',require('./posts'));
+
+
 //any req to home page goes to homecontroller .home
 // any req to users goes to users route
 

@@ -1,0 +1,12 @@
+.postPage {
+  display: flex;
+  flex-direction: row; }
+
+body {
+  margin: 0;
+  text-align: center;
+  color: #005792;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; }
