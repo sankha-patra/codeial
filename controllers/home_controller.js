@@ -1,3 +1,4 @@
+const { populate } = require("../models/post");
 const Post=require("../models/post")
 
 
@@ -21,7 +22,16 @@ module.exports.home=function(req,res){
     //return res.end("<h1>Express is up for Codeial!!!</h1>")
 
     //populate the user of each post
-    Post.find({}).populate("user").exec(function(err,posts){
+    //populating multiple models comments,user of the comments
+    Post.find({})
+    .populate("user")
+    .populate({
+        path:"comments",
+        populate:{
+            path:"user"
+        }
+    })
+    .exec(function(err,posts){
         return res.render("home",{
             title:"Home",
             posts:posts

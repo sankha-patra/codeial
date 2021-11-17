@@ -16,7 +16,11 @@ router.use('/users',require('./users'));
 //router.get("/profile",usersController.profile)
 
 
-//for posts
+//for comments
+router.use('/comments',require('./comments'));
+
+
+//for comments
 router.use('/posts',require('./posts'));
 
 

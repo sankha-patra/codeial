@@ -115,20 +115,20 @@
       .hero__container--left {
         line-height: 1.5; } }
   .hero__container--left h1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
     color: #00cc66; }
     @media screen and (max-width: 280px) {
       .hero__container--left h1 {
         font-size: 1.5rem; } }
-  .hero__container--left h2 {
+  .hero__container--left h3 {
     font-size: 4rem;
-    color: #222121; }
+    color: #0092ca; }
     @media screen and (max-width: 280px) {
-      .hero__container--left h2 {
+      .hero__container--left h3 {
         font-size: 2rem; } }
   .hero__container--left p {
     font-size: 2rem;
-    color: #222121;
+    color: #005792;
     margin-top: 1rem;
     font-weight: 700; }
     @media screen and (max-width: 280px) {
