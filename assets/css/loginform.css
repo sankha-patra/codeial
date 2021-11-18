@@ -29,10 +29,16 @@
 
 .webname:hover {
   transform: scale(0.98);
-  color: #fbf2d5; }
+  color: #00bbf0;
+  transition: all 0.3s; }
 
 body {
-  background-color: #64c4ed;
+  background: #8E2DE2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #00bbf0;
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -44,7 +50,7 @@ body {
   margin: 0; }
 
 .container {
-  background-color: #fbf2d5;
+  background-color: #c7eeff;
   padding: 20px 40px;
   border-radius: 5px;
   box-shadow: 0 5px 30px -5px black;

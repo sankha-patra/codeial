@@ -34,21 +34,41 @@
        <% } else {%>
         <!-- <button class="hero__container--btn"><a href="/users/sign-out">Sign Out</a></button> -->
         <section id="feed-posts">
-          <br><br><br>
-          <h4>Posts</h4>
-          
+          <br><br>
+          <!-- <img class="postimg" src="images/post.png" alt=""> -->
+          <h4><img class="postimg" src="images/post.png" alt="">  Posts</h4>
+         
           <form action="/posts/create" id="new-post-form" method="POST">
-            <textarea name="content"  cols="25" rows="4" placeholder="type here.." required></textarea>
+            <div class="form_control">
+            <textarea type="text" name="content"  cols="25" rows="4" placeholder="type here.." required></textarea>
             <br>
-          <input type="submit" class="hero__container--btn" value="Post">
+          </div>
+            <!-- <img class="postimg" src="images/post.png" alt=""> -->
+           
+          <input type="submit" class="bttn" value="Add post">
+         
           </form>
+        
           <div id="posts-list-container">
             <ul>
               <% for(post of posts){%>
                 <li>
                   <br>
                   <p>
-                   -><%= post.content %> :<small><%= post.user.name %></small>
+                   
+                    <!-- <small>
+                      <a href="/posts/destroy/<%= post.id %>">delete</a>
+                    </small> -->
+                    <img class="postimg" src="images/zip.png" alt="">
+                    <!-- <i class="fas fa-comments"></i> -->
+                   <%= post.user.name %> :<small><%= post.content %></small>
+                    <!-- if the user is signed in is same as user who created posts -->
+                    <% if  ( locals.user && locals.user.id == post.user.id){ %>
+                      <small>
+                        <a href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
+                      </small>
+                      <% } %>
+                   
                     <br>
                     <!-- <br>
                     <small><%= post.user.name %></small>
@@ -58,11 +78,18 @@
                   <div class="post-comments">
                     <% if (locals.user){ %>
                         <form action="/comments/create" method="POST">
-                            <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                          <div class="form_control">
+                            <!-- <i class="fas fa-comments"></i> -->
+                            <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus>
+                            <input class="button" type="submit" value="Add Comment">
+                        </div>
+
+
+                            <!-- <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus> -->
                              <!-- we want to send the post id of comment 
                         the id at which i want to add the comment to -->
                             <input type="hidden" name="post" value="<%= post._id %>" >
-                            <input type="submit" value="Add Comment">
+                            <!-- <input class="button" type="submit" value="Add Comment"> -->
                         </form>
 
                     <% } %>
@@ -72,10 +99,29 @@
                   <ul id="post-comments-<%= post._id %>">
                     <% for (comment of post.comments){%>
                       <p>
+<!-- 
+
+                        <% if  ( locals.user && locals.user.id == comment.user.id){ %>
+                          <small>
+                            <a href="/comments/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
+                          </small>
+                          <% } %> -->
+
+
+
+
+
                         <!-- <%= comment.content %> -->
+                        <br>
+                        <i class="fas fa-comments" style="color: #42b883;"></i>
                         <%= comment.user.name %>:
                         <small>
                           <%= comment.content %>
+                          <% if  ( locals.user && locals.user.id == comment.user.id){ %>
+                            <small>
+                              <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash-alt" style="color: orangered;"></i></a>
+                            </small>
+                            <% } %>
                           <!-- :<%= comment.user.name %> -->
                         </small>
                       </p>

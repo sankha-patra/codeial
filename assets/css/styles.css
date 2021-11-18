@@ -20,11 +20,11 @@
   transition: all 0.3s; }
 
 .navbar {
-  background: #000428;
+  background: #8E2DE2;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 40px;
   margin-top: 0;
@@ -116,19 +116,24 @@
         line-height: 1.5; } }
   .hero__container--left h1 {
     font-size: 4.2rem;
-    color: #00cc66; }
+    color: #8E2DE2;
+    /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
     @media screen and (max-width: 280px) {
       .hero__container--left h1 {
         font-size: 1.5rem; } }
   .hero__container--left h3 {
     font-size: 4rem;
-    color: #0092ca; }
+    color: #4A00E0; }
     @media screen and (max-width: 280px) {
       .hero__container--left h3 {
         font-size: 2rem; } }
   .hero__container--left p {
     font-size: 2rem;
-    color: #005792;
+    color: #8E2DE2;
     margin-top: 1rem;
     font-weight: 700; }
     @media screen and (max-width: 280px) {
@@ -137,6 +142,7 @@
   .hero__container--btn {
     font-size: 1rem;
     background-color: #00cc66;
+    background-color: #8E2DE2;
     padding: 14px 32px;
     border: none;
     border-radius: 4px;

@@ -7,7 +7,18 @@
 body{
     margin: 0;
     text-align: center; 
-    color: #005792;
+    // color: #005792;
+    color: #4A00E0;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // font-style: app;
+    // background-color: #bae8e8;
+    // background-color: #8ed2c9;
+    // background-color: #a2a8d3;
+    // background-color: #e7eaf6;
+    // background-color: #ffcece;
+    // background-color: #f6e4c4;
+    background-color: #c7eeff;
+    // background-color:#fbf2d5 ;
 
     // display: flex;
     // flex-direction: column;
@@ -16,3 +27,105 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+.button {
+    cursor: pointer;
+    margin-top: 5px;
+    display: inline-block;
+    // width: 100%;
+    background: #00bbf0;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    display: inline;
+  }
+  
+  .button:focus {
+    outline: 0;
+  }
+  .button:hover{
+      background: #005792;
+      color: white;
+      transition: 1ms;
+      transition: ease-in;
+  
+  }
+  .form_control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px #00bbf0 solid;
+    display:inline;
+    // width: 100%;
+    padding: 10px 0;
+    font-size: 12px;
+  //   color: #fff;
+    color:#00bbf0 ;
+  }
+  .form_control input:focus,
+.form_control input:valid {
+  outline: 0;
+//   border-bottom-color: lightblue;
+}
+.postimg{
+    height:20px;
+}
+
+
+.bttn {
+    cursor: pointer;
+    margin-top: 5px;
+    display: inline-block;
+    width: 5%;
+    background: #fecd51;
+    
+    padding: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    display: inline;
+  }
+  
+  .bttn:focus {
+    outline: 0;
+  }
+  .bttn:hover{
+      background:#42b883;
+      color: white;
+      transition: 1ms;
+      transition: ease-in;
+  
+  }
+  @keyframes ringing_bell {
+    0% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+  
+  .fa-trash:hover{
+      animation-name: ringing_bell;
+      animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+     
+  
+  }
+  .fa-trash-alt:hover{
+    animation-name: ringing_bell;
+    animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+   
+
+}
+  
+ 
