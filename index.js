@@ -19,7 +19,10 @@ const MongoStore=require("connect-mongo")
 const url="mongodb://localhost/codeial_development";
 const sassMiddleware = require("node-sass-middleware")
 
+const flash = require("connect-flash");
+const { setFlash } = require("./config/middleware");
 
+const customMware = require("./config/middleware")
 app.use(sassMiddleware({
     src:"./assets/scss",
     dest:"./assets/css",
@@ -92,11 +95,15 @@ app.use(passport.session());
 
 //this function checks wheather session ncookie pressent or not
 app.use(passport.setAuthenticatedUser);
+//flash uses session cookies so put it after that
+app.use(flash());
 
+
+app.use(customMware.setFlash);
 
 // use express router
 app.use("/",require("./routes"));
-
+app.use(customMware,setFlash)
 
 app.listen(port,function(err){
 

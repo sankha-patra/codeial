@@ -13,11 +13,13 @@ module.exports.create = function(req, res){
             }, function(err, comment){
                 // handle error
                 if(err){
-                    console.log("err");
+                    
+                    req.flash("error","Comment cannot be published")
                 }
 
                 post.comments.push(comment);
                 post.save();
+                req.flash("success","Comment published")
 
                 res.redirect('/');
             });
@@ -35,9 +37,11 @@ module.exports.destroy=function(req,res){
             let postId = comment.post;
             comment.remove();
             Post.findByIdAndUpdate(postId,{ $pull:{comments:req.params.id}},function(err,post){
+                req.flash("success","Comment deleted")
                 return res.redirect("back")
             })
         }else{
+            req.flash("success","Comment cannot be deleted")
             return res.redirect("back");
         }
     });

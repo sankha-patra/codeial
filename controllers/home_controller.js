@@ -2,47 +2,46 @@ const { populate } = require("../models/post");
 const Post=require("../models/post")
 const User =  require("../models/user")
 
-module.exports.home=function(req,res){
+module.exports.home=async function(req,res){
     console.log(req.cookies)
+    try{
 
-    // we edited the cookie
-    // res.cookie("user_id",25)
-    //rendering the view home using ejs
-
-
-    // Post.find({},function(err,posts){
-    //     return res.render("home",{
-    //         title:"Home",
-    //         posts:posts
-    //     });
-    
-    // });
-
-
-    //return res.end("<h1>Express is up for Codeial!!!</h1>")
-
-    //populate the user of each post
+         //populate the user of each post
     //populating multiple models comments,user of the comments
-    Post.find({})
+    let posts=await Post.find({})
     .populate("user")
     .populate({
         path:"comments",
         populate:{
             path:"user"
         }
-    })
-    .exec(function(err,posts){
+    });
+    let users=await User.find({});
+    return res.render("home",{
+        title:"Home",
+        posts:posts,
+        all_users:users
+    });
+       
 
-        User.find({},function(err,users){
-            return res.render("home",{
-                title:"Home",
-                posts:posts,
-                all_users:users
-            });
+    }catch(err){
+        console.log("error",err);
+        return;
 
-        });
-        
-    })
+    }
+
+    // we edited the cookie
+    // res.cookie("user_id",25)
+    //rendering the view home using ejs
+
+
+  
+
+   
+
+    
+    
+    
 
 
 

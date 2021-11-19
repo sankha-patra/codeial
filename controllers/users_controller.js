@@ -100,17 +100,67 @@ module.exports.create = function(req, res){
   });
 }
 
-// get the sign in data and create session for the user
-module.exports.createSession=function(req,res){
-  // user signed so redirect
-  return res.redirect("/");
 
 
+
+
+
+
+// // get the sign in data and create session for the user
+// module.exports.createSession=function(req,res){
+//   //flash message
+//   req.flash("Sucess","Logged in Successfuly")
+//   // user signed so redirect
+//   return res.redirect("/");
+
+
+// }
+// module.exports.destroySession = function(req,res){
+
+
+
+//   req.logout();
+//   //flash message
+// req.flash("Sucess","You have Logged out")
+//   return res.redirect("/")
+// }
+
+// // sign in and create a session for the user
+// module.exports.createSession = function(req, res){
+//   req.flash('success', 'Logged in Successfully');
+//   return res.redirect('/');
+// }
+
+// module.exports.destroySession = function(req, res){
+//   req.logout();
+//   req.flash('success', 'You have logged out!');
+
+
+//   return res.redirect('/');
+// }
+
+// sign in and create a session for the user
+module.exports.createSession = function(req, res){
+  req.flash('success', 'Logged in Successfully');
+  return res.redirect('/');
 }
-module.exports.destroySession = function(req,res){
+
+module.exports.destroySession = function(req, res){
   req.logout();
-  return res.redirect("/")
+  req.flash('success', 'You have logged out!');
+
+
+  return res.redirect('/');
 }
+
+
+
+
+
+
+
+
+
 
 
 // now this controller is ready to get accessed by a router
