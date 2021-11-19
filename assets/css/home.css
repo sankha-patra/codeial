@@ -96,7 +96,8 @@ body {
   #home-container #feed-posts {
     width: 85%;
     height: 100vh;
-    padding: 10px; }
+    padding: 10px;
+    margin-left: 16%; }
   #home-container #user-friends {
     width: 15%;
     border-left: 2px solid  #4A00E0;
