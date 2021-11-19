@@ -5,11 +5,32 @@ const User = require("../models/user")
 
 // for rendering profile page
 module.exports.profile=function(req,res){
-  return res.render("profile",{
-      title:"Profile-Page"
+  User.findById(req.params.id,function(err,user){
+    return res.render("profile",{
+      title:"Profile-Page",
+      profile_user:user
+  })
   })
   
+  
 }
+module.exports.update=function(req,res){
+  if(req.user.id == req.params.id){
+    User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+      return res.redirect("back")
+    })
+  }else{
+    res.status(401).send("Unautherized");
+  }
+}
+
+
+
+
+
+
+
+
 
 //for rendering posts page
 module.exports.posts=function(req,res){

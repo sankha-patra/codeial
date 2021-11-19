@@ -9,7 +9,9 @@ const usersPostController=require("../controllers/users_post_controller");
 // router.get("/profile",usersController.profile)
 
 
-router.get("/profile",passport.checkAuthentication,usersController.profile)
+router.get("/profile/:id",passport.checkAuthentication,usersController.profile)
+
+router.post("/update/:id",passport.checkAuthentication,usersController.update)
 
 
 router.get("/posts",usersController.posts)

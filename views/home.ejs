@@ -33,6 +33,9 @@
       </div>
        <% } else {%>
         <!-- <button class="hero__container--btn"><a href="/users/sign-out">Sign Out</a></button> -->
+
+
+        <div id="home-container">
         <section id="feed-posts">
           <br><br>
           <!-- <img class="postimg" src="images/post.png" alt=""> -->
@@ -78,12 +81,13 @@
                   <div class="post-comments">
                     <% if (locals.user){ %>
                         <form action="/comments/create" method="POST">
-                          <div class="form_control">
+                          
+                            <div class="form_control" style="display:inline-block;">
                             <!-- <i class="fas fa-comments"></i> -->
                             <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus>
-                            <input class="button" type="submit" value="Add Comment">
+                  
                         </div>
-
+                        <input class="button" type="submit" value="Add Comment">
 
                             <!-- <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus> -->
                              <!-- we want to send the post id of comment 
@@ -121,6 +125,7 @@
                             <small>
                               <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash-alt" style="color: orangered;"></i></a>
                             </small>
+                            <br>
                             <% } %>
                           <!-- :<%= comment.user.name %> -->
                         </small>
@@ -136,55 +141,25 @@
           </div>
           
         </section>
+        <section id=user-friends>
+          <br> <br>
+          <img src="images/laugh.png" alt="">
+          <h4>
+            
+            Friends</h4>
+          <% for(u of all_users) {%>
+            <br>
+            <p>
+              
+              <i class="fas fa-user" style="color:#4A00E0 ;"></i>
+              <a style="text-decoration: none;" href="/users/profile/<%= u.id %>"><%= u.name%></a>
+            </p>
+
+            <% } %>
+
+
+        </section>
+      </div>
         <% }%>
        
-      <!-- </div>
-      <div class="hero__container--right">
-        <img
-          src="images/img-2.svg"
-          alt="alien"
-          class="hero__container--img"
-        />
-      </div>
-    </div> -->
-
-
-<!-- 
-    <section id="feed-posts">
-      <h4>Posts</h4>
-      <% if(locals.user){ %>
-      <form action="/posts/create" id="new-post-form" method="POST">
-          <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
-          <input type="submit" value="Post">
-      </form>
-      <% } %>
-  
-      <div id="posts-list-container">
-          <ul>
-              <% for(post of posts){ %>
-                  
-              <li>
-                  <p>
-                      <%= post.content %>
-                      <br>
-                      <small>
-                          <%= post.user.name %>
-                      </small>
-                  </p>
-                  <div class="post-comments">
-                      <% if (locals.user){ %>
-                          <form action="/comments/create" method="POST">
-                              <input type="text" name="content" placeholder="Type Here to add comment...">
-                              <input type="hidden" name="post" value="<%= post._id %>" >
-                              <input type="submit" value="Add Comment">
-                          </form>
-  
-                      <% } %>
-                  </div>
-                  
-              </li>
-                  
-              <%} %>
-          </ul>
-      </div>
-  </section> -->
+     
