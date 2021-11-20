@@ -1,6 +1,7 @@
 <!-- 
 <link rel="stylesheet" href="/css/home.scss"> -->
 <link rel="stylesheet" href="/css/home.css">
+<!-- <link rel="stylesheet" href="/css/footer.css"> -->
      
 
 <!-- <div class="hero" >
@@ -43,32 +44,35 @@
          
           <form action="/posts/create" id="new-post-form" method="POST">
             <div class="form_control">
-            <textarea type="text" name="content"  cols="25" rows="4" placeholder="type here.." required></textarea>
+            <textarea type="text" name="content"  cols="25" rows="2" placeholder="type here.." required></textarea>
             <br>
           </div>
             <!-- <img class="postimg" src="images/post.png" alt=""> -->
            
-          <input type="submit" class="bttn" value="Add post">
+          <input type="submit" class="button" value="Add post">
          
           </form>
         
           <div id="posts-list-container">
             <ul>
               <% for(post of posts){%>
-                <li>
+                <li id="post-<%= post._id %>">
                   <br>
                   <p>
                    
                     <!-- <small>
                       <a href="/posts/destroy/<%= post.id %>">delete</a>
                     </small> -->
-                    <img class="postimg" src="images/zip.png" alt="">
+                    <!-- <img class="postimg" src="images/zip.png" alt=""> -->
+                    
                     <!-- <i class="fas fa-comments"></i> -->
+                    <img class="postimg" src="images/post.png" alt="">
+
                    <%= post.user.name %> :<small><%= post.content %></small>
                     <!-- if the user is signed in is same as user who created posts -->
                     <% if  ( locals.user && locals.user.id == post.user.id){ %>
                       <small>
-                        <a href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
+                        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
                       </small>
                       <% } %>
                    
@@ -162,4 +166,4 @@
       </div>
         <% }%>
        
-     
+     <!-- <script src="/js/home_posts.js"></script> -->

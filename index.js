@@ -31,7 +31,9 @@ app.use(sassMiddleware({
     prefix:"/css"
 }));
 //reading through posts requests
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
+
+// app.use(express.urlencoded());
 
 // when the req comes cookie needs to be parsed in middleware
 app.use(cookieParser());
@@ -40,6 +42,11 @@ app.use(cookieParser());
 
 // we put assets folder inside
 app.use(express.static("./assets"));
+
+
+//make the uploads path availbale to browser
+
+app.use("/uploads",express.static(__dirname + "/uploads"))
 
 
 
