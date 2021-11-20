@@ -44,6 +44,8 @@
          
           <form action="/posts/create" id="new-post-form" method="POST">
             <div class="form_control">
+              <!-- <input type="file" name="avatar" placeholder="Profile Picture">
+              <br><br> -->
             <textarea type="text" name="content"  cols="25" rows="2" placeholder="type here.." required></textarea>
             <br>
           </div>
@@ -66,7 +68,16 @@
                     <!-- <img class="postimg" src="images/zip.png" alt=""> -->
                     
                     <!-- <i class="fas fa-comments"></i> -->
+
+
+                    
+                    <!-- <img src="<%=post.user.avatar%>" alt="<%=post.user.name %>" width="100">
+                    <br> -->
                     <img class="postimg" src="images/post.png" alt="">
+
+                    
+
+
 
                    <%= post.user.name %> :<small><%= post.content %></small>
                     <!-- if the user is signed in is same as user who created posts -->
@@ -155,7 +166,9 @@
             <br>
             <p>
               
-              <i class="fas fa-user" style="color:#4A00E0 ;"></i>
+              <i class="fas fa-user" style="color:palegoldenrod ;"></i>
+              <!-- <img style class="header-img"  src="<%=u.avatar%>"  width="30" height="30"> -->
+
               <a style="text-decoration: none;" href="/users/profile/<%= u.id %>"><%= u.name%></a>
             </p>
 

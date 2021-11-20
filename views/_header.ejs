@@ -37,9 +37,12 @@
                                 <i class="fas fa-home"></i>
                                 Home</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="/users/sign-out" class="navbar_menu--links">Sign-Out</a>
+                            <a href="/users/sign-out" class="navbar_menu--links">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Sign-Out</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             User:<%= user.name %>
+                            <img style class="header-img"  src="<%=user.avatar%>" alt="<%=user.name %>" width="30" height="30">
+                             <%= user.name %>
                             <!-- <li><p>Email:<%= user.email %></p></li> -->
     
                          </div>

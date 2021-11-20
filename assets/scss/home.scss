@@ -33,6 +33,27 @@
     
 // }
 body{
+
+
+  background: #9796f0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   margin: 0;
  font-weight: bolder;
  
@@ -44,12 +65,13 @@ body{
     // text-align: center; 
     // color: #005792;
     color: #4A00E0;
+    // color: #f6378f;
    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
-    // background-color: #c7eeff;
-    background-color: #fecd51;
-    // background-color:#fbf2d5 ;
+    
+    // background-color: #fecd51;
+  
 
     // display: flex;
     // flex-direction: column;
@@ -63,7 +85,9 @@ body{
     margin-top: 5px;
     display: inline-block;
     // width: 100%;
-    background: #00bbf0;
+    // background: #00bbf0;
+    background: #005792;
+    color: white;
     padding: 5px;
     font-family: inherit;
     font-size: 15px;
@@ -76,7 +100,7 @@ body{
     outline: 0;
   }
   .button:hover{
-      background: #005792;
+      background: #00bbf0;
       color: white;
       transition: 1ms;
       transition: ease-in;
@@ -85,7 +109,7 @@ body{
   .form_control input {
     background-color: transparent;
     border: 0;
-    border-bottom: 3px #00bbf0 solid;
+    border-bottom: 3px #005792 solid;
     display:inline;
     // width: 100%;
     padding: 10px 0;
@@ -175,16 +199,36 @@ body{
     width: 15%;
     border-left: 2px solid  #4A00E0;
     border-bottom: 2px solid  #4A00E0;
-    min-height: 100vh;
+    min-height:  50vh;;
     position: relative;
     // padding-bottom: 10px;
     margin-bottom: 0;
+    color: blanchedalmond;
     // background-color: #a393eb;
-    background-color: #d59bf6;
+    // background-color: #d59bf6;
     // bottom: 0;
     padding-left:5%;
     padding-right: 2.5%;
     text-decoration: none;
+
+
+
+    background: #4568DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
  
 }

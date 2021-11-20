@@ -38,6 +38,13 @@ module.exports.update= async function(req,res){
 
           if(req.file){
             // this is saving the path of uploaded file into the avatar field in user
+            if(user.avatar){
+              fs.unlinkSync(path.join(__dirname,"..",user.avatar))
+            }
+
+
+
+
             user.avatar=User.avatarPath + "/" + req.file.filename;
             
           }

@@ -4,9 +4,10 @@
 
 .container {
   animation-name: floating;
-  animation-duration: 1.5s;
+  animation-duration: 1.25s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; }
+  animation-timing-function: ease-in-out;
+  animation-direction: inherit; }
 
 @keyframes floating {
   0% {
@@ -20,10 +21,10 @@
   color: #fbf2d5;
   color: #000;
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: bolder;
   animation-name: floating;
-  animation-duration: 1.5s;
+  animation-duration: 1.25s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out; }
 
@@ -54,7 +55,8 @@ body {
   padding: 20px 40px;
   border-radius: 5px;
   box-shadow: 0 5px 30px -5px black;
-  border-radius: 12px; }
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px; }
 
 .container h1 {
   text-align: center;
@@ -62,7 +64,7 @@ body {
 
 .container a {
   text-decoration: none;
-  color: lightblue; }
+  color: #005792; }
 
 .btn {
   cursor: pointer;
@@ -91,17 +93,17 @@ body {
 .form-control {
   position: relative;
   margin: 20px 0 40px;
-  width: 300px; }
+  width: 500px; }
 
 .form-control input {
   background-color: transparent;
   border: 0;
-  border-bottom: 3px #00bbf0 solid;
+  border-bottom: 5px #005792 solid;
   display: block;
   width: 100%;
   padding: 15px 0;
-  font-size: 18px;
-  color: #00bbf0; }
+  font-size: 20px;
+  color: #005792; }
 
 .form-control input:focus,
 .form-control input:valid {

@@ -7,9 +7,10 @@
 }
 .container { 
   animation-name: floating;
-  animation-duration: 1.5s;
+  animation-duration: 1.25s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  animation-direction: inherit;
   // margin-left: 30px;
   // margin-top: 5px;
 }
@@ -23,10 +24,10 @@
   color:#fbf2d5 ;
   color: #000;
   font-size: 3.5rem; 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: bolder;
   animation-name: floating;
-  animation-duration: 1.5s;
+  animation-duration: 1.25s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -73,7 +74,9 @@ body {
   border-radius: 5px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 2);
 //   border-radius: 10px 10px 0 0;
-  border-radius: 12px;
+  // border-radius: 50px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
 
 .container h1 {
@@ -83,7 +86,8 @@ body {
 
 .container a {
   text-decoration: none;
-  color: lightblue;
+  // color: lightblue;
+  color: #005792;
 }
 
 .btn {
@@ -119,20 +123,21 @@ body {
 .form-control {
   position: relative;
   margin: 20px 0 40px;
-  width: 300px;
+  width: 500px;
   
 }
 
 .form-control input {
   background-color: transparent;
   border: 0;
-  border-bottom: 3px #00bbf0 solid;
+  border-bottom: 5px #005792 solid;
   display: block;
   width: 100%;
   padding: 15px 0;
-  font-size: 18px;
+  font-size: 20px;
 //   color: #fff;
-  color:#00bbf0 ;
+  // color:#00bbf0 ;
+  color: #005792;
 }
 
 .form-control input:focus,
