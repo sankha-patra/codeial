@@ -4,55 +4,13 @@
     display: flex;
     flex-direction: row;
 }
-// footer{
- 
-//     background: #8E2DE2;
-//     background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-//     background: linear-gradient(to right, #4A00E0, #8E2DE2);
-    
-//     position: relative;
-   
-   
-//     text-align: center;
-//     width: 100%;
-//     height: 1.5rem;
-//     color: white;
-//     padding-top: 5px;
-//     bottom: 0;
 
-//     top: 100%;
-       
-      
-     
-//         // display: flex;
-//         text-align: center;
-//         // margin-top: 10rem;;
-      
-//         // right: 47.5%;
-       
-    
-// }
 body{
 
 
   background: #9796f0;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   margin: 0;
  font-weight: bolder;
@@ -69,16 +27,6 @@ body{
    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
-    
-    // background-color: #fecd51;
-  
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // height: auto;
-    // overflow: hidden;
 }
 .button {
     cursor: pointer;
@@ -115,7 +63,7 @@ body{
     padding: 10px 0;
     font-size: 12px;
   //   color: #fff;
-    color:#00bbf0 ;
+    color:#005792 solid;
   }
   .form_control input:focus,
 .form_control input:valid {
@@ -216,18 +164,6 @@ body{
     background: #4568DC;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
  

@@ -4,7 +4,7 @@
 
 .container {
   animation-name: floating;
-  animation-duration: 1.25s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: inherit; }
@@ -24,7 +24,7 @@
   margin-bottom: 30px;
   font-weight: bolder;
   animation-name: floating;
-  animation-duration: 1.25s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out; }
 
@@ -40,7 +40,7 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4A00E0, #8E2DE2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #00bbf0;
+  color: #005792;
   font-family: 'Muli', sans-serif;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ body {
 .form-control {
   position: relative;
   margin: 20px 0 40px;
-  width: 500px; }
+  width: 300px; }
 
 .form-control input {
   background-color: transparent;
@@ -108,7 +108,7 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: lightblue; }
+  border-bottom-color: #005792; }
 
 .form-control label {
   position: absolute;
@@ -124,5 +124,5 @@ body {
 
 .form-control input:focus + label span,
 .form-control input:valid + label span {
-  color: lightblue;
+  color: #005792;
   transform: translateY(-30px); }

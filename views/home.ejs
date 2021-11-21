@@ -41,11 +41,14 @@
           <br><br>
           <!-- <img class="postimg" src="images/post.png" alt=""> -->
           <h4><img class="postimg" src="images/post.png" alt="">  Posts</h4>
+          
          
-          <form action="/posts/create" id="new-post-form" method="POST">
+          <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
             <div class="form_control">
               <!-- <input type="file" name="avatar" placeholder="Profile Picture">
               <br><br> -->
+              <input type="file" name="avatar" placeholder="Profile Picture">
+              <br><br>
             <textarea type="text" name="content"  cols="25" rows="2" placeholder="type here.." required></textarea>
             <br>
           </div>
@@ -73,13 +76,15 @@
                     
                     <!-- <img src="<%=post.user.avatar%>" alt="<%=post.user.name %>" width="100">
                     <br> -->
-                    <img class="postimg" src="images/post.png" alt="">
+                    <!-- <img class="postimg" src="images/post.png" alt=""> -->
+                    <img src="<%=post.avatar%>"  width="100">
+                    <br>
 
                     
 
 
 
-                   <%= post.user.name %> :<small><%= post.content %></small>
+                    <img class="postimg" src="images/post.png" alt="">  <%= post.user.name %> :<small><%= post.content %></small>
                     <!-- if the user is signed in is same as user who created posts -->
                     <% if  ( locals.user && locals.user.id == post.user.id){ %>
                       <small>
@@ -98,8 +103,10 @@
                         <form action="/comments/create" method="POST">
                           
                             <div class="form_control" style="display:inline-block;">
+
                             <!-- <i class="fas fa-comments"></i> -->
                             <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus>
+                            
                   
                         </div>
                         <input class="button" type="submit" value="Add Comment">

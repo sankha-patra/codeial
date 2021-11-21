@@ -42,9 +42,6 @@ module.exports.update= async function(req,res){
               fs.unlinkSync(path.join(__dirname,"..",user.avatar))
             }
 
-
-
-
             user.avatar=User.avatarPath + "/" + req.file.filename;
             
           }

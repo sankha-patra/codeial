@@ -1,13 +1,8 @@
-body {
-  align-items: center;
-  margin: 0;
-  color: #505050;
-  background-color: #141010;
-  height: 100vh;
-  position: relative;
-  bottom: 0; }
-
 .profile {
+  min-height: 100vh;
+  align-items: center; }
+
+.profileclass {
   min-height: 100vh;
   align-items: center; }
 
