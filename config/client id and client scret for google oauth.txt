@@ -1,0 +1,7 @@
+client -id
+872350794162-cb2dskkf6oi1ni87bd470a9sn2c5s2u1.apps.googleusercontent.com
+
+
+
+client secret
+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

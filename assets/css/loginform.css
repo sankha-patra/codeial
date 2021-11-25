@@ -2,13 +2,6 @@
 * {
   box-sizing: border-box; }
 
-.container {
-  animation-name: floating;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: inherit; }
-
 @keyframes floating {
   0% {
     transform: translate(0, 0px); }
@@ -23,6 +16,12 @@
   font-size: 3.5rem;
   margin-bottom: 30px;
   font-weight: bolder;
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.google:hover {
   animation-name: floating;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -52,7 +51,7 @@ body {
 
 .container {
   background-color: #c7eeff;
-  padding: 20px 40px;
+  padding: 25px 45px;
   border-radius: 5px;
   box-shadow: 0 5px 30px -5px black;
   border-bottom-left-radius: 100px;

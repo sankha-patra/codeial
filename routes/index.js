@@ -1,3 +1,5 @@
+//root index for all routess
+
 const express=require("express");
 const router = express.Router();
 // to access home controller action

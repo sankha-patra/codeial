@@ -38,13 +38,19 @@ body {
   transition: 1ms;
   transition: ease-in; }
 
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 500px; }
+
 .form_control input {
   background-color: transparent;
   border: 0;
   border-bottom: 3px #005792 solid;
   display: inline;
+  width: 300px;
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 20px;
   color: #005792 solid; }
 
 .form_control input:focus,
@@ -102,9 +108,10 @@ body {
   min-height: 100vh; }
   #home-container #feed-posts {
     width: 80%;
-    margin-left: 45%; }
+    margin-left: 40%; }
   #home-container #user-friends {
     width: 15%;
+    box-shadow: 0 5px 30px -5px black;
     border-left: 2px solid  #4A00E0;
     border-bottom: 2px solid  #4A00E0;
     min-height: 50vh;

@@ -1,4 +1,4 @@
-//root index for all routess
+
 
 const express =  require("express");
 const app=express();
@@ -16,6 +16,13 @@ const session = require("express-session")
 const passport =  require("passport")
 
 const passportLocal =  require("./config/passport-local-stratergy")
+
+
+
+const passportJWT =  require("./config/passport-jwt-stratergy")
+const passportGoogle = require("./config/passport-google-oauth2-strategy")
+
+
 // const MongoStore=require("connect-mongo")(session)
 const MongoStore=require("connect-mongo")
 const url="mongodb://localhost/codeial_development";

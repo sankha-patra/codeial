@@ -54,14 +54,20 @@ body{
       transition: ease-in;
   
   }
+  .form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 500px;
+    
+  }
   .form_control input {
     background-color: transparent;
     border: 0;
     border-bottom: 3px #005792 solid;
     display:inline;
-    // width: 100%;
+    width: 300px;
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 20px;
   //   color: #fff;
     color:#005792 solid;
   }
@@ -138,13 +144,14 @@ body{
     width: 80%;
     // height: 100vh;
     // padding: 10px;
-    margin-left: 45%;
+    margin-left: 40%;
    
     // align-content:space-around;
    
   }
   #user-friends{
     width: 15%;
+    box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
     border-left: 2px solid  #4A00E0;
     border-bottom: 2px solid  #4A00E0;
     min-height:  50vh;;
