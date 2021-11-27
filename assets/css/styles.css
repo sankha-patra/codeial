@@ -1,6 +1,7 @@
 .navbar__logo, .navbar__menu, .navbar__menu--links {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-between; }
 
 .li {
   background-color: #007cb9;

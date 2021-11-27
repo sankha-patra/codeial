@@ -139,7 +139,8 @@ body{
 #home-container{
   // align-content: flex-start;
   display: flex;
-  min-height: 100vh;
+  // min-height: 100vh;
+  height: auto;
   #feed-posts{
     width: 80%;
     // height: 100vh;
