@@ -154,6 +154,38 @@ exports.newComment = (comment) => {
     })
 };
 
+exports.newCommentPost = (comment, post) => {
+    console.log("Comment: ", comment);
+    console.log("Post: ", post);
+    let htmlString = nodeMailer.renderTemplate({
+        comment: comment
+    }, '/comments/new_commentPost.ejs')
+    nodeMailer.transporter.sendMail({
+        from: 'sankha2312@gmail.com',
+        to: post.user.email,
+        subject: `${comment.user.name} commented on your post`,
+        html: `<div style="background-color:yellow; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <h1 style="color: lightseagreen;">Hi ${post.user.name }</h1> 
+        <br>
+        <br>
+        <h1 style="color: blue;">${comment.user.name} commented "<strong style="color: lightseagreen;" >${comment.content}</strong>" on your post</h1>
+        <br>
+        <br>
+        <h1>Thank you!!!!</h1>
+        </div>
+         
+         `
+    }, (err, info) => {
+        if(err){
+            console.log(" @@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%",err);
+            return;
+        }
+        // console.log("Message successfully sent", info);
+        console.log("Message successfully sent");
+        return;
+    })
+};
+
 
 
 

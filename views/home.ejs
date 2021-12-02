@@ -1,16 +1,7 @@
-<!-- 
-<link rel="stylesheet" href="/css/home.scss"> -->
-<link rel="stylesheet" href="/css/home.css">
-<!-- <link rel="stylesheet" href="/css/footer.css"> -->
-     
 
-<!-- <div class="hero" >
+<link rel="stylesheet" href="/css/home.css">    
 
-    <div class="hero__container">
-      <div class="hero__container--left"> 
-        <h1>Social media website</h1>
-        <h2>Created by Sankha</h2>
-        <p>Sign up now to join the list.</p> -->
+
        
 
         <% if (!locals.user) {%>
@@ -18,163 +9,250 @@
 
             <div class="hero__container">
               <div class="hero__container--left">
+
+                <span class="loader"></span>
                 <h1>Social media website</h1>
                 <h3>Created by Sankha</h3>
-                <p>Sign up now to join the list.</p>
+                <p>Welcome !!!!</p>
           <button class="hero__container--btn"><a href="/users/sign-up">Sign Up</a></button>
           <button class="hero__container--btn"><a href="/users/sign-in">Sign In</a></button>
         </div>
         <div class="hero__container--right">
-          <img
-            src="images/img-2.svg"
+          <!-- <img
+            
+            src="images/m.svg"
+           
             alt="alien"
             class="hero__container--img"
-          />
+          /> -->
+          <!-- <img
+            
+            src="images/m1.png"
+           
+            alt="alien"
+            class="hero__container--img"
+          /> -->
+          <img
+            
+          src="images/minion.png"
+         
+          alt="alien"
+          class="hero__container--img"
+        />
         </div>
       </div>
        <% } else {%>
-        <!-- <button class="hero__container--btn"><a href="/users/sign-out">Sign Out</a></button> -->
+        
 
 
         <div id="home-container">
         <section id="feed-posts">
           <br><br>
-          <!-- <img class="postimg" src="images/post.png" alt=""> -->
-          <h4>  Posts</h4>
-          
-         
+          <span class="Loader"></span>
+        <!-- posts section $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+         <div class="post-avatar">
+           <br>
+          <h2> Whats in your mind???</h2>
+          <br>
+          <h2>Let us know!!!!!!!</h2>
+          <br>
           <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
             <div class="form_control">
-              <!-- <input type="file" name="avatar" placeholder="Profile Picture">
-              <br><br> -->
-              <input type="file" name="avatar" placeholder="Profile Picture">
+            
+              <input type="file" name="avatar" placeholder="Profile Picture" required>
               <br><br>
-            <textarea type="text" name="content"  cols="25" rows="2" placeholder="type here.." required></textarea>
+            <input type="text" name="content"  placeholder="start typing....." required autofocus></textarea>
             <br>
           </div>
-            <!-- <img class="postimg" src="images/post.png" alt=""> -->
+           
            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="Add post">
          
           </form>
-        
+        </div>
           <div id="posts-list-container">
             <ul>
               <% for(post of posts){%>
+
+                <div class="whole" id="p-<%= post._id %>">
+
+
+
+
+
                 <li id="post-<%= post._id %>">
-                  <br>
+                  <br><br><br>
                   <p>
                    
-                    <!-- <small>
-                      <a href="/posts/destroy/<%= post.id %>">delete</a>
-                    </small> -->
-                    <!-- <img class="postimg" src="images/zip.png" alt=""> -->
                     
-                    <!-- <i class="fas fa-comments"></i> -->
-
-
-                    
-                    <!-- <img src="<%=post.user.avatar%>" alt="<%=post.user.name %>" width="100">
-                    <br> -->
-                    <!-- <img class="postimg" src="images/post.png" alt=""> -->
-                    <img src="<%=post.avatar%>"  width="100">
+                    <img src="<%= post.avatar%>"  width="100%" height="100%" alt=" " style="background-size:cover">
+                    <br>
                     <br>
 
                     
 
 
 
-                    <img class="postimg" src="images/post.png" alt="">  <%= post.user.name %> :<small><%= post.content %></small>
-                    <!-- if the user is signed in is same as user who created posts -->
+                    <!-- <img class="postimg" src="images/post.png" alt="">  -->
+                    <!-- <i class="fas fa-cannabis fa-2x"></i> -->
+                    <!-- <img src="images/mail.png" width="10%" height="10%" alt=""> -->
+                    <img  class="header-img"  src="<%=post.user.avatar%>" width="7%" height="7%" alt="">
+
+                    <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;">
+                     <%= post.user.name %> : <%= post.content %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
                     <% if  ( locals.user && locals.user.id == post.user.id){ %>
-                      <small>
-                        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
-                      </small>
+                      
+                    
+                        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash fa-2x" style="color: orangered;"></i></a>
+                      
                       <% } %>
+
+                    </div>
+
+                      <!-- display the likes of the post if the user is logged in then 
+                      show the link to toggle likes , else just show the count -->
+                      <br>
+
+                      <small>
+
+                        <br>
+                        <% if(locals.user){ %>
+                          <a href="/likes/toggle/?id=<%= post._id%>&type=Post" class="toggle-like-button" data-likes="<%= post.likes.length %>" style="text-decoration: none;color: blanchedalmond;">
+                            <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i>
+                            <%= post.likes.length %>&nbsp;likes
+                          </a>
+                          <br>
+                         
+                        <% }else{ %>
+                          <%= post.likes.length %>likes
+                        <% } %>
+                      </small>
                    
                     <br>
-                    <!-- <br>
-                    <small><%= post.user.name %></small>
-                    <br> -->
+                  
                     <br>
                   </p>
+
+
+
+
+                      <!-- posts section $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+ 
+
+                      <!-- comments section   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+
+
                   <div class="post-comments">
                     <% if (locals.user){ %>
-                        <form action="/comments/create" method="POST">
+                        <form id="post-<%= post._id %>-comments-form" action="/comments/create" method="POST">
                           
                             <div class="form_control" style="display:inline-block;">
 
-                            <!-- <i class="fas fa-comments"></i> -->
-                            <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus>
+                           
+                            <input type="text" name="content" placeholder="Write comment..." required autofocus style="width: 100%;">
                             
                   
                         </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class="button" type="submit" value="Add Comment">
 
-                            <!-- <input type="text" name="content" placeholder="Type Here to add comment..." required autofocus> -->
                              <!-- we want to send the post id of comment 
                         the id at which i want to add the comment to -->
                             <input type="hidden" name="post" value="<%= post._id %>" >
-                            <!-- <input class="button" type="submit" value="Add Comment"> -->
+                         
                         </form>
+                        
 
                     <% } %>
 
                 </div>
-                <div class="post-comments-list">
-                  <ul id="post-comments-<%= post._id %>">
+          <div class="post-comments-list" style="align-items: center;">
+            <ul id="post-comments-<%= post._id %>">
                     <% for (comment of post.comments){%>
+
+                <li id="comment-<%= comment._id %>">
                       <p>
-<!-- 
-
-                        <% if  ( locals.user && locals.user.id == comment.user.id){ %>
-                          <small>
-                            <a href="/comments/destroy/<%= post.id %>"><i class="fas fa-trash" style="color: orangered;"></i></a>
-                          </small>
-                          <% } %> -->
-
-
-
-
-
-                        <!-- <%= comment.content %> -->
+ 
                         <br>
-                        <i class="fas fa-comments" style="color: #42b883;"></i>
-                        <%= comment.user.name %>:
-                        <small>
+                       
+                        <br>
+                        <img  class="header-img"  src="<%=comment.user.avatar%>" width="7%" height="7%" alt="" style="display: inline-block;">
+                        
+                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;">
+                          
+                          <%= comment.user.name %> :
+
                           <%= comment.content %>
-                          <% if  ( locals.user && locals.user.id == comment.user.id){ %>
-                            <small>
-                              <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash-alt" style="color: orangered;"></i></a>
-                            </small>
+                          <% if  (locals.user && locals.user.id == comment.user._id){ %>
+                            
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash-alt fa-2x" style="color: orangered;"></i></a>
+                            
+                            
+                            
+                           
                             <br>
                             <% } %>
-                          <!-- :<%= comment.user.name %> -->
+   
+
+
+                        </div>
+                       
+                     
+              
+                          
+                          
+                         
                         </small>
                       </p>
+
+                     
+                      <br>
+                      <small>
+                        <!-- display the likes of this comment if the user is logged in then show the link to toggle likese
+                            else just show the count -->
+                        <% if(locals.user){ %>
+                          <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" style="text-decoration: none;color: blanchedalmond;">
+                            <!-- <%= comment.likes.length %>likes -->
+                            <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i><%= comment.likes.length %>&nbsp;likes
+                          </a>
+                        <% }else{ %>
+                          <%= comment.likes.length %>likes
+                        <% } %>
+                      </small>
+                </li>
                       <%} %>                  
                   </ul>
                 </div>
+
+
+                <!-- comments section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                 
                 </li>
+              </div>
                 <% } %>
 
             </ul>
           </div>
           
         </section>
+
         <section id=user-friends>
           <br> <br>
           <img class="frnds-img" src="images/laugh.png" height="65px">
-          <h4>
+          <h3 style="color:#00bbf0;">
             
-            Friends</h4>
+         Friends</h3>
           <% for(u of all_users) {%>
             <br>
             <p>
               
               <i class="fas fa-user" style="color:palegoldenrod ;"></i>
-              <!-- <img style class="header-img"  src="<%=u.avatar%>"  width="30" height="30"> -->
+             
 
               <a style="color:palegoldenrod ;text-decoration:none;"  href="/users/profile/<%= u.id %>"><%= u.name%></a>
             </p>
@@ -186,4 +264,19 @@
       </div>
         <% }%>
        
-     <!-- <script src="/js/home_posts.js"></script> -->
+    
+
+     <!-- CHANGE :: import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
+
+<script src="js/_toggle_likes.js"></script>
+<script>
+    
+    $('.toggle-like-button').each(function(){
+    
+    new toggleLike(this);
+});
+
+</script>
+ <!-- importing this script for creating the comments -->
+ <script src="/js/home_post_comments.js" ></script>
+ <script src="/js/home_posts.js"></script>

@@ -5,6 +5,9 @@
 * {
   box-sizing: border-box;
 }
+
+
+      
 // .container { 
 //   animation-name: floating;
 //   animation-duration: 1s;
@@ -15,21 +18,19 @@
 //   // margin-top: 5px;
 // }
 
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }   
-}
+// @keyframes floating {
+//   0% { transform: translate(0,  0px); }
+//   50%  { transform: translate(0, 15px); }
+//   100%   { transform: translate(0, -0px); }   
+// }
+
 .webname{
   color:#fbf2d5 ;
   color: #000;
   font-size: 3.5rem; 
   margin-bottom: 30px;
   font-weight: bolder;
-  animation-name: floating;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+ 
 } 
 .google:hover{
  
@@ -96,7 +97,7 @@ body {
 .container a {
   text-decoration: none;
   // color: lightblue;
-  color: #005792;
+  color: orangered;
 }
 
 .btn {
@@ -173,6 +174,62 @@ body {
 .form-control input:valid + label span {
   color: #005792;
   transform: translateY(-30px);
+}
+
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid;
+  border-color: transparent transparent #05004e white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 38px;
+  height: 38px;
+  border-color: #41d8bf #ff007b transparent transparent;
+  animation: rotation 1s linear infinite;
+}
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 5px solid;
+  border-color: #f96d00 #00bbf0 transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1.2s linear infinite;
+}
+
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
    

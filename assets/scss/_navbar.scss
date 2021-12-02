@@ -35,7 +35,7 @@
   border-radius: 100%;
 }
 .navbar_menu--links:hover{
-  color:orangered ;
+  // color:orangered ;
   transition-duration: 2s;
   transition: all 0.3s;
 }
@@ -50,10 +50,20 @@
   i{
     color: white;
   }
-  background: #8E2DE2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: #8E2DE2;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
+
+
+
+  background: linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 91.1%);
+
+  // background: linear-gradient(72.3deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 92.2%);
+  // background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
+
+
+
 
 
 
@@ -64,7 +74,7 @@
   ;
 
 
-  height: 40px;
+  height: 100px;
   margin-top: 0;
   margin-right: 0;
   color: $light;

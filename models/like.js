@@ -9,7 +9,7 @@ const likeSchema = new mongoose.Schema({
     },
 
        //this field is used for defiening the type of liked object since it is a dynamic pathde
-       
+
  
     likeable:{
         type:mongoose.Schema.ObjectId,
@@ -17,4 +17,9 @@ const likeSchema = new mongoose.Schema({
         enum:["Post","Comment"]
     }
 
+},{
+    timestamps:true
 })
+
+const Like = mongoose.model("Like",likeSchema);
+module.exports = Like;

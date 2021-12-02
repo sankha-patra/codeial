@@ -1,10 +1,12 @@
-const { populate } = require("../models/post");
-const Post=require("../models/post")
+// const { populate } = require("../models/post");
+const Post=  require("../models/post")
 const User =  require("../models/user")
 
 module.exports.home=async function(req,res){
     console.log(req.cookies)
     try{
+
+        //populate the likes of each post and comment
 
          //populate the user of each post
     //populating multiple models comments,user of the comments
@@ -12,10 +14,21 @@ module.exports.home=async function(req,res){
     .populate("user")
     .populate({
         path:"comments",
-        populate:{
-            path:"user"
-        }
-    });
+        // populate:{
+        //     path:"user"
+        // },
+        // populate:{
+        //     path:"likes"
+        // }
+        populate: [
+            {
+                path: 'user'
+            },
+            {
+                path: 'likes'
+            }
+        ]
+    }).populate("likes");
     let users=await User.find({});
     return res.render("home",{
         title:"Home",

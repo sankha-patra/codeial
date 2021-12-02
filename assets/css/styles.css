@@ -20,18 +20,12 @@
   border-radius: 100%; }
 
 .navbar_menu--links:hover {
-  color: orangered;
   transition-duration: 2s;
   transition: all 0.3s; }
 
 .navbar {
-  background: #8E2DE2;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 40px;
+  background: linear-gradient(109.6deg, #0e0b38 11.2%, #ef2525 91.1%);
+  height: 100px;
   margin-top: 0;
   margin-right: 0;
   color: #f7f7f7;
@@ -122,24 +116,19 @@
         line-height: 1.5; } }
   .hero__container--left h1 {
     font-size: 4.2rem;
-    color: #8E2DE2;
-    /* fallback for old browsers */
-    color: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to right, #4A00E0, #8E2DE2);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    color: #f96d00; }
     @media screen and (max-width: 280px) {
       .hero__container--left h1 {
         font-size: 1.5rem; } }
   .hero__container--left h3 {
     font-size: 4rem;
-    color: #4A00E0; }
+    color: #118a7e; }
     @media screen and (max-width: 280px) {
       .hero__container--left h3 {
         font-size: 2rem; } }
   .hero__container--left p {
     font-size: 2rem;
-    color: #8E2DE2;
+    color: #00bbf0;
     margin-top: 1rem;
     font-weight: 700; }
     @media screen and (max-width: 280px) {
@@ -147,8 +136,7 @@
         font-size: 1.5rem; } }
   .hero__container--btn {
     font-size: 1rem;
-    background-color: #00cc66;
-    background-color: #8E2DE2;
+    background-color: #f96d00;
     padding: 14px 32px;
     border: none;
     border-radius: 4px;
@@ -171,7 +159,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #eb2632;
+    background: #00bbf0;
     transition: all 0.3s;
     border-radius: 4px; }
   .hero__container--btn:hover:after {

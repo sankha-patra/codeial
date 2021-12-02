@@ -24,7 +24,9 @@ router.use('/comments',require('./comments'));
 
 //for comments
 router.use('/posts',require('./posts'));
+//for likes
 
+router.use('/likes',require('./likes'));
 
 //any req to home page goes to homecontroller .home
 // any req to users goes to users route

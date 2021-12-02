@@ -1,1 +1,15 @@
 https://www.codegrepper.com/code-examples/whatever/Could+not+create+server+TCP+listening+socket+%2A%3A6379%3A+bind%3A+Address+already+in+use
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/32947076/redis-server-in-ubuntu14-04-bind-address-already-in-use
