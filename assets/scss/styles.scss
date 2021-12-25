@@ -50,7 +50,7 @@
     &--left h1 {
       font-size: 4.2rem;
       // color: #1ee494;
-      color: #f96d00;
+      color: white;
       
      
       // color: $lime;
@@ -68,7 +68,7 @@
       // color: #4A00E0; 
       // color:#076585;
       // color: #22b2da;
-      color: #118a7e;
+      color: black;
       
 
       @include mobile {
@@ -80,7 +80,7 @@
       font-size: 2rem;
       // color: #8E2DE2;
       // color: #1ee494;
-      color: #00bbf0;
+      color: white;
       
       
       // color: $dark;
@@ -97,7 +97,8 @@
     &--btn {
       font-size: 1rem;
       // background-color: $lime;
-      background-color:#f96d00 ;
+      background-color:#6c5ce7;
+      color:black;
       padding: 14px 32px;
       border: none;
       border-radius: 4px;
@@ -124,7 +125,7 @@
       left: 0;
       width: 0;
       height: 100%;
-      background: #00bbf0 ;
+      background: black ;
       // background: #4A00E0;;
       transition: all 0.3s;
       border-radius: 4px;

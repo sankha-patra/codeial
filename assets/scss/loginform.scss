@@ -79,7 +79,7 @@ body {
 //   background-color: #d9dad7;
 //   background-color: #bbe4e9;
   // background-color: #fbf2d5;
-  background-color: #c7eeff;
+ 
   padding: 25px 45px;
   border-radius: 5px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 2);
@@ -87,17 +87,26 @@ body {
   // border-radius: 50px;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
+  background-color: sandybrown;
 }
 
 .container h1 {
   text-align: center;
   margin-bottom: 30px;
+  
 }
+
 
 .container a {
   text-decoration: none;
   // color: lightblue;
   color: orangered;
+}
+.container a:hover {
+  text-decoration: none;
+  // color: lightblue;
+  // background-color:  #81ecec;
+  color: black;
 }
 
 .btn {

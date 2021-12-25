@@ -13,7 +13,7 @@
 .navbar_menu--links {
   text-decoration: none;
   list-style: none;
-  color: white;
+  color: #f96d00;
   padding-bottom: 2px; }
 
 .header-img {
@@ -24,7 +24,8 @@
   transition: all 0.3s; }
 
 .navbar {
-  background: linear-gradient(109.6deg, #0e0b38 11.2%, #ef2525 91.1%);
+  background-color: #434343;
+  color: #f96d00;
   height: 100px;
   margin-top: 0;
   margin-right: 0;
@@ -116,19 +117,19 @@
         line-height: 1.5; } }
   .hero__container--left h1 {
     font-size: 4.2rem;
-    color: #f96d00; }
+    color: white; }
     @media screen and (max-width: 280px) {
       .hero__container--left h1 {
         font-size: 1.5rem; } }
   .hero__container--left h3 {
     font-size: 4rem;
-    color: #118a7e; }
+    color: black; }
     @media screen and (max-width: 280px) {
       .hero__container--left h3 {
         font-size: 2rem; } }
   .hero__container--left p {
     font-size: 2rem;
-    color: #00bbf0;
+    color: white;
     margin-top: 1rem;
     font-weight: 700; }
     @media screen and (max-width: 280px) {
@@ -136,7 +137,8 @@
         font-size: 1.5rem; } }
   .hero__container--btn {
     font-size: 1rem;
-    background-color: #f96d00;
+    background-color: #6c5ce7;
+    color: black;
     padding: 14px 32px;
     border: none;
     border-radius: 4px;
@@ -159,7 +161,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #00bbf0;
+    background: black;
     transition: all 0.3s;
     border-radius: 4px; }
   .hero__container--btn:hover:after {

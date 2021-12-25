@@ -34,10 +34,10 @@
           /> -->
           <img
             
-          src="images/minion.png"
+          src="images/as.svg"
          
           alt="alien"
-          class="hero__container--img"
+          class="hero__container--img" style="height: 60%;"
         />
         </div>
       </div>
@@ -48,18 +48,21 @@
         <div id="home-container">
         <section id="feed-posts">
           <br><br>
-          <span class="Loader"></span>
+          <!-- <span class="Loader"></span> -->
         <!-- posts section $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
          <div class="post-avatar">
            <br>
-          <h2> Whats in your mind???</h2>
+          <h2> Whats in your mind <h2>
+          <h2><%= locals.user.name %> ???</h2>
           <br>
           <h2>Let us know!!!!!!!</h2>
           <br>
           <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
+            <input type="file" name="avatar" placeholder="Profile Picture" required>
             <div class="form_control">
-            
-              <input type="file" name="avatar" placeholder="Profile Picture" required>
+<!--             
+              <input type="file" name="avatar" placeholder="Profile Picture" required> -->
+              <!-- <label for="fileUpload">Upload file</label> -->
               <br><br>
             <input type="text" name="content"  placeholder="start typing....." required autofocus></textarea>
             <br>

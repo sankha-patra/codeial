@@ -22,12 +22,14 @@
 }
 .i{
   color:#fff;
+  
 }
 
 .navbar_menu--links{
   text-decoration: none;
   list-style: none;
-  color: white;
+  // color: white;
+  color: #f96d00;
   padding-bottom:2px;
   
 }
@@ -49,6 +51,7 @@
   // background: $light;
   i{
     color: white;
+    
   }
   // background: #8E2DE2;  /* fallback for old browsers */
   // background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
@@ -57,12 +60,18 @@
 
 
 
-  background: linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 91.1%);
+  // background: linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 91.1%);
 
   // background: linear-gradient(72.3deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 92.2%);
   // background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
 
 
+
+  // background: #000000;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color:#434343;
+  color: #f96d00;
 
 
 

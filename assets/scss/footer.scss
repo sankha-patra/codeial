@@ -3,7 +3,7 @@ footer{
 
   margin-top: 20px;
  
-    color: white;
+    color: #f96d00;
     padding-top: 5px;
 
     
@@ -20,8 +20,18 @@ footer{
         // right: 47.5%;
 
         // background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
-        background: linear-gradient(109.6deg,  rgb(239, 37, 37) 11.2%, rgb(14, 11, 56) 91.1%);
-       
+        // background: linear-gradient(109.6deg,  rgb(239, 37, 37) 11.2%, rgb(14, 11, 56) 91.1%);
+        
+
+
+
+
+
+
+
+        background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         position:relative;
         bottom: 0;
   
