@@ -7,13 +7,10 @@
   background-color: #007cb9;
   text-decoration: none; }
 
-.i {
-  color: #fff; }
-
 .navbar_menu--links {
   text-decoration: none;
   list-style: none;
-  color: #f96d00;
+  color: white;
   padding-bottom: 2px; }
 
 .header-img {
@@ -24,8 +21,8 @@
   transition: all 0.3s; }
 
 .navbar {
-  background-color: #434343;
-  color: #f96d00;
+  color: black;
+  background-color: #6c5ce7;
   height: 100px;
   margin-top: 0;
   margin-right: 0;
@@ -38,7 +35,7 @@
   text-decoration: none;
   list-style: none; }
   .navbar i {
-    color: white; }
+    color: black; }
   .navbar__logo {
     color: #222121;
     cursor: pointer;

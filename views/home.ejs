@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="/css/home.css">    
 
-
+<link rel="stylesheet" href="/css/chat_box.css">
        
 
         <% if (!locals.user) {%>
@@ -42,6 +42,18 @@
         </div>
       </div>
        <% } else {%>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $("#1").click(function(){
+            $("#user-chat-box").fadeToggle();
+            
+            });
+          });
+          </script>
+          
+          	<button id="1" style="margin: 2%;border-radius:25px;padding: 5px;background-color: #a29bfe;color: #000;font-size: larger;padding-left: 20px;padding-right: 20px;font-weight:bold;border: 2px solid #6c5ce7 ;">Chatroom</button><br><br>
         
 
 
@@ -87,10 +99,26 @@
                   <br><br><br>
                   <p>
                    
+                    <img  class="header-img"  src="<%=post.user.avatar%>" width="7%" height="7%" alt="">
+                    <br>
                     
+                    
+                    <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;">
+                      <%= post.user.name %> : <%= post.content %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                     <% if  ( locals.user && locals.user.id == post.user.id){ %>
+                       
+                     
+                         <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash fa-2x" style="color: orangered;"></i></a>
+                       
+                       <% } %>
+ 
+                     </div>
+                   
+ 
                     <img src="<%= post.avatar%>"  width="100%" height="100%" alt=" " style="background-size:cover">
                     <br>
-                    <br>
+                    
 
                     
 
@@ -99,23 +127,12 @@
                     <!-- <img class="postimg" src="images/post.png" alt="">  -->
                     <!-- <i class="fas fa-cannabis fa-2x"></i> -->
                     <!-- <img src="images/mail.png" width="10%" height="10%" alt=""> -->
-                    <img  class="header-img"  src="<%=post.user.avatar%>" width="7%" height="7%" alt="">
-
-                    <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;">
-                     <%= post.user.name %> : <%= post.content %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    
-                    <% if  ( locals.user && locals.user.id == post.user.id){ %>
-                      
-                    
-                        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash fa-2x" style="color: orangered;"></i></a>
-                      
-                      <% } %>
 
-                    </div>
-
+                   
                       <!-- display the likes of the post if the user is logged in then 
                       show the link to toggle likes , else just show the count -->
-                      <br>
+                      
 
                       <small>
 
@@ -264,6 +281,9 @@
 
 
         </section>
+
+        
+    <%- include('_chat_box') -%>
       </div>
         <% }%>
        
@@ -283,3 +303,13 @@
  <!-- importing this script for creating the comments -->
  <script src="/js/home_post_comments.js" ></script>
  <script src="/js/home_posts.js"></script>
+
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+ 
+<script src="/js/chat_engine.js"></script>
+<% if (locals.user){ %>
+  <script>
+      new ChatEngine('user-chat-box', '<%= locals.user.name %>')
+  </script>
+  <% } %>

@@ -51,19 +51,8 @@
 
         <li id="post-${post._id}">
         <br><br><br>
-         <img src="${post.avatar}"  width="100%" height="50%" alt=" ">
-        <br>
-        <br>
-        
-
-        
-
-
-        <p>
-      
-        
         <img  class="header-img"  src="${post.user.avatar}" width="7%" height="7%" alt="">
-      
+        <br>
 
         <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;">
          ${post.user.name} : 
@@ -75,7 +64,25 @@
                         
                         
          <a class="delete-post-button"  href="/posts/destroy/${ post._id }"><i class="fas fa-trash fa-2x" style="color: orangered;"></i></a>
-            </div>
+
+         </div>
+        
+
+        <br>
+        <br>
+        
+
+        
+
+
+        <p>
+      
+        
+       
+
+
+         <img src="${post.avatar}"  width="100%" height="50%" alt=" ">
+            
                        
                         
                         <br>

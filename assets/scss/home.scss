@@ -122,7 +122,7 @@
   // padding-left: 10%;
   // padding-right: 10%;
   // border: 4px solid #00bbf0;
-  border:solid 6px #f96d00;
+  border:solid 4px #f96d00;
   // border:solid 5px #fecd51 ;
  
   border-top-right-radius: 100px;
@@ -143,14 +143,15 @@
   // background-color: #fecea8;
   // background-color: #222831;
   overflow:auto;
-  background-color:black;;
+  background-color:black;
+  margin-left: 20vh;
   // color: blanchedalmond;
   // color: #f96d00;
   width: 65%;
   padding-left: 1%;
   padding-right: 1%;
   padding-bottom: 5%;
-  // border: 5px solid #00bbf0;
+  border: 4px solid #00bbf0;
   // border: 5px solid #f96d00;
   border-radius: 50px;
   margin-bottom: 50px;
@@ -361,7 +362,7 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     //   border-left: 4px solid  #00bbf0;
     // border-top: 4px solid  #00bbf0;
     // border-bottom: 5px solid  #00bbf0;
-    border:solid 6px #6c5ce7;;
+    border:solid 4px #00bbf0;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     min-height:  50vh;;
@@ -422,6 +423,11 @@ input[type=file]::file-selector-button {
 }
 
 input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+#1:hover{
+  transition: 0.2s;
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
