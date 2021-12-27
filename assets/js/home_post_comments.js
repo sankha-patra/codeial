@@ -70,11 +70,11 @@ class PostComments{
                         <br>
                        
                        
-                        <img  class="header-img"  src="${comment.user.avatar}" width="7%" height="7%" alt="">
+                        <img  class="header-img"  src="${comment.user.avatar}" width="10%" height="10%" alt="">
 
 
                         
-                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;">
+                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #81ecec;">
                         
                         ${comment.user.name} :
                          ${comment.content}

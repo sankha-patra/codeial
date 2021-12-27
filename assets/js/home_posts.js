@@ -51,10 +51,10 @@
 
         <li id="post-${post._id}">
         <br><br><br>
-        <img  class="header-img"  src="${post.user.avatar}" width="7%" height="7%" alt="">
+        <img  class="header-img"  src="${post.user.avatar}" width="10%" height="10%" alt="">
         <br>
 
-        <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;">
+        <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;color:color: #81ecec;">
          ${post.user.name} : 
          ${post.content}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 

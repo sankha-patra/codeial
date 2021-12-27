@@ -18,18 +18,18 @@
         margin-top: auto;
         text-align: center;
         margin-top: 15%;
-        color: blanchedalmond;
+        color: black;
         border:solid 5px #4A00E0;
-        background-color:black;
+        background-color:#fff;
         // border-radius:  25px; ;
-        border-bottom-left-radius: 100px;
-        border-top-right-radius: 100px;
+       border-radius: 5%;
         padding:15px;
         box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
         max-width: 25%;
         margin-left: 38%;
         margin-bottom: 25%;
         min-height: 55%;
+        min-width: min-content;
         
         
         
@@ -39,13 +39,14 @@
         // border: 0;
         border: 5px #4A00E0 solid;
         display: block;
+        border-radius: 15px;
         width: 100%;
         padding: 15px 0;
         font-size: 20px;
       //   color: #fff;
         // color:#00bbf0 ;
        
-        color:blanchedalmond ;
+        color:black ;
       }
     // .profileclass{
     //     min-height: 100vh; 
@@ -53,6 +54,10 @@
     // }
     .profilepic{
         border-radius: 100%;
+        width: 40%;
+        border: 5px solid #4A00E0;
+       
+        box-shadow:0 5px 30px -5px black;
 
     }
    
@@ -61,3 +66,20 @@
 ul{
     list-style-type: none;
 }
+@media screen and (max-width: 600px) {
+
+    
+
+    .he{
+
+        width: 300px;
+    }
+    .profilepic{
+        // border-radius: 100%;
+        size: 20%;
+
+    }
+  
+
+    
+  }

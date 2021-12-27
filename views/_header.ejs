@@ -35,15 +35,19 @@
                             <a href="/users/profile/:profile_user.id" class="navbar_menu--links">Profile</a> -->
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="/" class="navbar_menu--links">
-                                <i class="fas fa-home"></i>
-                                Home</a>
+                                <i class="fas fa-home fa-2x"></i>
+                                </a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="/users/sign-out" class="navbar_menu--links">
-                                <i class="fas fa-sign-out-alt"></i>
-                                Sign-Out</a>
+                                <i class="fas fa-sign-out-alt fa-2x"></i>
+                                </a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img  class="header-img"  src="<%=user.avatar%>" width="30" height="30">
-                             <%= user.name %>
+                            <a href="/users/profile/<%= u.id %>">
+                            <img  class="header-img"  src="<%=user.avatar%>" width="30" height="30" style="border:2px solid black;">
+                        </a>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             <!-- <%= user.name %> -->
                             <!-- <li><p>Email:<%= user.email %></p></li> -->
     
                          </div>

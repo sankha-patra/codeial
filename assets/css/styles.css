@@ -81,6 +81,13 @@
         background: #eb2632;
         transition: all 0.3s ease; }
 
+@media screen and (max-width: 600px) {
+  .navbar {
+    justify-content: stretch;
+    width: 100%; }
+  .navbar_menu--links {
+    justify-content: stretch; } }
+
 * {
   margin-top: 0%;
   margin-bottom: 0%;

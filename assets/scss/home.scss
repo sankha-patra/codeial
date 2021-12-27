@@ -46,6 +46,66 @@
     display: flex;
     flex-direction: row;
 }
+.looder::after,
+.looder::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 7px solid;
+  border-color: transparent transparent #ffc93c #64c4ed;
+  width: 148px;
+  height: 148px;
+  transform-origin: center center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 1.5s linear infinite;
+  
+}
+
+.looder::before {
+  width: 160px;
+  height: 160px;
+  border-color:white #6c5ce7 transparent transparent;
+  animation: rotation 2s linear infinite;
+}
+.looder {
+  width: 118px;
+  height: 118px;
+  
+margin:2%;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 7px solid;
+  border-color: transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 5000.2s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .loader::after,
 .loader::before {
@@ -112,21 +172,21 @@
   // background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
   
   // background: linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 91.1%);
-  background-color: black;
+  background-color:#ffcf7a;;
   overflow: hidden;
   align-items: center;
   width: 35%;
   padding:1%;
-  height: 50vmin;
+  height: 42vmin;
+  border-radius: 8%;
   
   // padding-left: 10%;
   // padding-right: 10%;
   // border: 4px solid #00bbf0;
-  border:solid 4px #f96d00;
+  border:solid 6px  #1b789c;
   // border:solid 5px #fecd51 ;
  
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
+  
   // border-radius: 100%;
  
   margin-bottom: 50px;
@@ -153,7 +213,7 @@
   padding-bottom: 5%;
   border: 4px solid #00bbf0;
   // border: 5px solid #f96d00;
-  border-radius: 50px;
+  border-radius: 20px;
   margin-bottom: 50px;
   // box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
 
@@ -208,8 +268,10 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     // color: #4A00E0;
     // color:blanchedalmond;
     // color: #f96d00;
-    color: #81ecec;
+    
+    color: #1b789c;
     // color: #f6378f;
+   
    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
@@ -362,11 +424,14 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     //   border-left: 4px solid  #00bbf0;
     // border-top: 4px solid  #00bbf0;
     // border-bottom: 5px solid  #00bbf0;
-    border:solid 4px #00bbf0;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    min-height:  50vh;;
+    border:solid 6px #ffcf7a;;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height:  50vh;
     position: relative;
+    min-width:max-content;
     // padding-bottom: 10px;
     margin-bottom: 0;
     // color: blanchedalmond;
@@ -377,7 +442,8 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
     padding-left:5%;
     padding-right: 2.5%;
     text-decoration: none;
-    background-color: black;
+    // background-color: black;
+    background-color: #4191b1;
 
     
 
@@ -430,5 +496,50 @@ input[type=file]::file-selector-button:hover {
   transition: 0.2s;
   background-color: #81ecec;
   border: 2px solid #00cec9;
+}
+.fas:hover{
+  color: #f95959;;
+
+
+}
+@media screen and (max-width: 600px) {
+  body{
+    width: 100;
+    overflow:scroll;
+  }
+  #home-container{
+    display: block;
+    // min-height: 100vh;
+    height: auto;
+  }
+  .post-avatar{
+    border-radius: 10px;
+    width: min-content;
+    height: min-content;
+    margin-left: 7%;
+  }
+  .whole{
+    width:80%;
+    margin-bottom: 10%;
+    align-content: center;
+    margin-left: 0%;
+    // height: 100vh;
+    // padding: 10px;
+    // margin-left: 15%;
+
+  }
+  #user-friends{
+    width: 80%;
+    align-content: center;
+    // margin-left: 0%;
+    // border-radius: 10px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    margin-left: 22%;
+  }
+
+
+  
+  
 }
 

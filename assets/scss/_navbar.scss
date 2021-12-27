@@ -164,3 +164,18 @@ background-color: #6c5ce7;
     }
   }
 }
+@media screen and (max-width: 600px) {
+ .navbar{
+  
+   justify-content:stretch;
+   width: 100%;
+ }
+ .navbar_menu--links{
+  justify-content:stretch;
+ }
+
+
+  
+  
+}
+
