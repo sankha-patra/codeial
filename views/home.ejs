@@ -13,8 +13,8 @@
 
                 <span class="loader"></span>
                 <h1>Social media website</h1>
-                <h3>Created by Sankha</h3>
-                <p>Welcome !!!!</p>
+                <h3>Codeial</h3>
+                <p>Created by Sankha!!!!</p>
           <button class="hero__container--btn"><a href="/users/sign-up">Sign Up</a></button>
           <button class="hero__container--btn"><a href="/users/sign-in">Sign In</a></button>
         </div>
@@ -66,6 +66,26 @@
           	<!-- <button id="1" style="margin: 2%;border-radius:25px;padding: 5px;background-color: #a29bfe;color: #000;font-size: larger;padding-left: 20px;padding-right: 20px;font-weight:bold;border: 2px solid #6c5ce7 ;">
               
               Chatroom</button><br><br> -->
+
+
+              
+               
+               
+               
+                <div class="FRND"style="animation: cubic-bezier(0.55, 0.085, 0.68, 0.53);background-color:#f95959;width:max-content;border-radius: 5px;padding: 2%;color: white;border: 2px solid black;margin-right:0% ;">
+                 
+                    <a class="nav-link" href="/users/friends" style="text-decoration: none;color: black;"><h3>My Friends</h3></a>
+                
+                  <br>
+                    <a class="nav-link" href="/users/friend-requests" style="text-decoration: none;color: black;"><h3>Friend Requests</h3></a>
+               <br>
+               
+                  <a class="nav-link" href="/friends/all" style="text-decoration: none;color: black;"><h3>Add Friend</h3></a>
+              
+
+                </div>
+              
+                
         
 
 
@@ -84,7 +104,7 @@
           <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
             <!-- <input type="file" name="avatar" placeholder="Profile Picture" style="display:none;" required> -->
             <div id='update-avatar'><span style="display: inline-block;"><h4>Avatar</h4></span>   <input type="file" name="avatar" id="img" style="display:none;">
-              <label id='avatar-inp' for="img"> <i class="fa fa-upload" aria-hidden="true"></i></label></div>
+              <label id='avatar-inp' for="img"> <i class="fa fa-upload fa-2x" aria-hidden="true"></i></label></div>
               <input id='update-btn' type="submit" class="button"  value="Update">
 
             <div class="form_control">
@@ -282,7 +302,7 @@
           <img class="frnds-img" src="images/laugh.png" height="65px">
           <h3 style="color:#ffcf7a;">
             
-         Friends</h3>
+         All users</h3>
           <% for(u of all_users) {%>
             <br>
             <p>

@@ -128,14 +128,17 @@
   100% {
     transform: rotate(-360deg); } }
 
+i:hover {
+  color: #41d8bf; }
+
 .post-avatar {
-  background-color: #ffcf7a;
+  background-color: #eaeaea;
   overflow: hidden;
   align-items: center;
   width: 35%;
   padding: 1%;
   height: 42vmin;
-  border-radius: 8%;
+  border-radius: 4%;
   border: solid 6px  #1b789c;
   margin-bottom: 50px;
   margin-left: 30vh;
@@ -195,7 +198,7 @@ body {
   outline: 0; }
 
 .button:hover {
-  background: #fecd51;
+  background: #f95959;
   color: black;
   transition: 1ms;
   transition: ease-in;
@@ -339,3 +342,13 @@ input[type=file]::file-selector-button:hover {
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
     margin-left: 22%; } }
+
+i:hover {
+  color: #f95959; }
+
+.FRND a:hover {
+  color: white; }
+
+.FRND a {
+  color: black;
+  background-color: #f95959; }

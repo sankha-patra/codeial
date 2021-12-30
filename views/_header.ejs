@@ -43,7 +43,15 @@
                                 </a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="/users/profile/<%= user._id %>">
-                            <img  class="header-img" alt="img" width="30" height="30"  src="<%=user.avatar%>" width="30" height="30" style="border:2px solid black;">
+
+                                <% if(user.avatar){ %>
+                                    <img  class="header-img" alt="img" width="30" height="30"  src="<%=user.avatar%>" width="40" height="40" style="border:2px solid black;">
+                               
+                                <% }else {%>
+                                
+                                    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="40" height="40">
+                                <% } %>
+                          
                         </a>
                             <br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

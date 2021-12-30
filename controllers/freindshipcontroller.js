@@ -1,5 +1,6 @@
-const Freind=require('../models/freindship');
+
 const User=require('../models/user');
+const Freind=require('../models/freindship');
 const queue=require('../config/kue');
 // const Message=require('../models/message');
 const removefreindworker=require('../workers/removefreind_worker');
@@ -169,12 +170,25 @@ module.exports.removeFreind=async function(req,res)
     // find the user by email
     // get user id and freind id from route
     console.log("*******",req.query.id);
+
     if (!req.query.id) {
         res.status(404).send("Link Not Found - invalid id");
       }
+      console.log(Freind)
+
     let freindship=await Freind.findById(req.query.id);
-    console.log("000000000",to_name);
     console.log("44444",freindship);
+    console.log("000000000",to_name);
+    
+//     Freind.findOne(req.query.id, function (err, friendship) {
+//     if (err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("Result : ", friendship);
+//     }
+// });
+    
     // deleting the associated chat with user
     // let msg=Message.findById(freindship._id);
     // msg.remove();

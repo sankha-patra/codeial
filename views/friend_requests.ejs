@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="/css/home.css">
+    
+<div style="height: 100vh;color: black;">
+
+<br><br><br>
+<% for(wannaBeFriend of friendRequests){ %>
+   
+  <div style="padding: 2%;background-color: black;color: white;margin-left: 40%;width:20%;margin-top: 0%;border-bottom: 2px solid white;padding-left: 5%;padding-right: 0%;">
+
+    <% if(wannaBeFriend.user_id.avatar){ %>
+        <img src="<%=wannaBeFriend.user_id.avatar %>" width="30%" height="30%" style="border-radius: 50%;border: 2px solid black;">
+    <% }else {%>
+    
+        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="30%" height="30%">
+    <% } %>
+    
+    <br>
+    <%= wannaBeFriend.user_id.name %>
+    <br>
+    <br>
+    <a class="button" style="text-decoration: none;" href="/friends/AcceptfriendRequest/<%= wannaBeFriend._id %>" role="button">Accept</a><br><br>
+</div>
+
+<% } %>
+</div>

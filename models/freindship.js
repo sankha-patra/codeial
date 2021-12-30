@@ -8,7 +8,10 @@ const friendshipSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    to_name:String,
+    to_name:{
+        type:String,
+        ref:'User'
+    },
     // the user who accepted this request, the naming is just to understand, otherwise, the users won't see a difference
     to_user: {
 

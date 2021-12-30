@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 const passport=require("passport");
 const freindcontroler=require('../controllers/freindshipcontroller');
-
+const friendsController = require('../controllers/friends_Controller');
 
 const usersController=require("../controllers/users_controller");
 const usersPostController=require("../controllers/users_post_controller");
@@ -41,6 +41,11 @@ router.post("/create-session",passport.authenticate(
     //if authentication not done then it redirects to sign in page
     {failureRedirect:"/users/sign-in"},
 ),usersController.createSession);
+
+
+
+router.get('/friends', friendsController.renderPage);
+router.get('/friend-requests', friendsController.friendRequests);
 
 
 

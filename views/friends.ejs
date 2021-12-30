@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" href="/css/home.css">
+<div style="height: 100vh;">
+
+<br><br>
+
+<div style="padding: 2%;background-color: black;color: white;margin-left: 40%;width:20%;margin-top: 0%;border-bottom: 2px solid white;padding-left: 5%;padding-right: 0%;">
+    <h2>Your Friends</h2>
+    <br>
+
+    <% for(friend of friends){ %> 
+    
+   
+    <% if(friend.user_id.id==locals.user.id){ %>
+
+        <% if(friend.friend_id.avatar ){ %>
+            <img src="<%= friend.friend_id.avatar %>" width="30%" height="30%" style="border-radius: 50%;">
+           
+            
+        <% }else {%>
+        
+            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="30%" height="30%">
+            <% } %>
+
+
+
+
+
+
+        
+        <br>
+        <a href="/users/profile/<%= friend.friend_id._id %>" style="text-decoration: none;color: white;"><%= friend.friend_id.name %></a> 
+        <br>
+        <br>
+        <a class="button" href="/friends/toggle-friend/<%= friend.friend_id._id %>" role="button" style="text-decoration: none;color: white;">Unfriend</a><br><br>
+    <% }else{ %>
+
+        <% if(friend.user_id.avatar){ %>
+           
+            <img src="<%= friend.user_id.avatar %>" width="30%" height="30%"style="border-radius: 50%;border: 2px solid black;">
+        <% }else {%>
+        
+            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="30%" height="30%">
+            <% } %>
+        <br>
+        
+        <a href="/users/profile/<%= friend.user_id._id %>" style="text-decoration: none;color: white;"><%= friend.user_id.name %></a> 
+        <br>
+        <br>
+        <a class="button" href="/friends/toggle-friend/<%= friend.user_id._id %>" style="text-decoration: none;" role="button">Unfriend</a><br><br>
+    <% } %>
+    
+<% } %>
+    </div>
+</div>

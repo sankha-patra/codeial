@@ -20,20 +20,14 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type:String
     },
-    request:
-    [ {
-        type:Object
+    friends : [
+      {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Friendships'
       }
-    ],
-    friendships: [
-          {
-             type:Object
-              
-              
-           
-          }
-        
-    ]
+  ]
+    
+    
     
 },{
     timestamps:true

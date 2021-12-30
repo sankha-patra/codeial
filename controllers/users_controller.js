@@ -9,82 +9,84 @@ const path = require("path")
 // for rendering profile page
 
 
-module.exports.profile=function(req,res){
-  User.findById(req.params.id,function(err,user){
-    return res.render("profile",{
-      title:"Profile-Page",
-      profile_user:user
-  })
-  })
+// module.exports.profile=function(req,res){
+//   User.findById(req.params.id,function(err,user){
+    
+    
+//     return res.render("profile",{
+//       title:"Profile-Page",
+//       profile_user:user
+//   })
+//   })
   
   
-}
+// }
 
 //////////////////////////////////////
 
-// module.exports.profile = function(req, res){
+module.exports.profile = function(req, res){
     
-//   User.findById(req.params.id)
-//   .populate({
-//       path: 'friends'
-//   })
-//   .populate({
-//       path : 'posts',
-//       populate : {
-//           path : 'comments',
-//           model: 'Comment',
-//           select:{
-//               createdAt:0,
-//               updatedAt:0
-//           },
-//           populate:{
-//               path: 'user',
-//               model: 'User',
-//               select:{
-//                   posts:0,
-//                   email: 0,
-//                   password:0,
-//                   createdAt:0,
-//                   updatedAt:0
-//               }
-//           }
-//       }
-//   })
-//   .exec(function(err, user){       
-//       let isFriend=false;
-//       let ispending = false;
-//       for(friendship of user.friends){
-//           // console.log("in users controller")
-//           // console.log(friendship);
-//           // // console.log(req.user._id);
+  User.findById(req.params.id)
+  .populate({
+      path: 'friends'
+  })
+  // .populate({
+  //     path : 'posts',
+  //     populate : {
+  //         path : 'comments',
+  //         model: 'Comment',
+  //         select:{
+  //             createdAt:0,
+  //             updatedAt:0
+  //         },
+  //         populate:{
+  //             path: 'user',
+  //             model: 'User',
+  //             select:{
+  //                 posts:0,
+  //                 email: 0,
+  //                 password:0,
+  //                 createdAt:0,
+  //                 updatedAt:0
+  //             }
+  //         }
+  //     }
+  // })
+  .exec(function(err, user){       
+      let isFriend=false;
+      let ispending = false;
+      for(friendship of user.friends){
+          // console.log("in users controller")
+          // console.log(friendship);
+          // // console.log(req.user._id);
 
           
 
-//           //for finding is request is pending or accepted
+          //for finding is request is pending or accepted
 
-//           if(friendship.user_id==req.user.id || friendship.friend_id==req.user.id){
+          if(friendship.user_id==req.user.id || friendship.friend_id==req.user.id){
                
-//               ispending = true;
-//           }
+              ispending = true;
+          }
 
 
-//           if((friendship.user_id==req.user.id || friendship.friend_id==req.user.id) && (friendship.request_accepted)){
-//               isFriend = true;
-//               ispending = false;
-//               break;
-//           }
-//       }
+          if((friendship.user_id==req.user.id || friendship.friend_id==req.user.id) && (friendship.request_accepted)){
+              isFriend = true;
+              ispending = false;
+              break;
+          }
+      }
 
      
-//       return res.render('profile', {
-//                   title: 'Profile-Page',
-//                   profile : user,
-//                   isFriend : isFriend,
-//                   ispending:ispending
-//               });
-//   });
+      return res.render('profile', {
+                  title: 'Profile-Page',
+                  profile_user : user,
+                  isFriend : isFriend,
+                  ispending:ispending
+              });
+  });
   
-// };
+};
 
 
 

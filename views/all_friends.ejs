@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/home.css">
+<div style="min-height:max-content;">
+    <br><br><br>
+    
+<% if(locals.user){ %>
+    
+    <% for(user of users){ %>
+
+        <li style="list-style: none;"> 
+
+
+            
+
+
+            <div style="padding: 2%;background-color: black;color: white;margin-left: 40%;width:20%;margin-top: 0%;border-bottom: 2px solid white;padding-left: 5%;padding-right: 0%;">
+<% if(user.avatar){ %>
+    <img src="<%= user.avatar %>" width="20%" height="20%" style="border-radius: 50%;border: 2px solid black;">
+<% }else {%>
+
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="20%" height="20%">
+<% } %>
+<br>
+
+
+<span class="uname">
+
+    
+    <a href="/users/profile/<%= user.id %>" style="text-decoration: none;color: white;"><%= user.name %></a>
+
+</span>
+</div>
+        </li>
+
+
+
+
+        <% } %>
+
+
+
+    <% } %>
+
+</div>
