@@ -70,11 +70,11 @@ class PostComments{
                         <br>
                        
                        
-                        <img  class="header-img"  src="${comment.user.avatar}" width="10%" height="10%" alt="">
+                        <img  class="header-img"  src="${comment.user.avatar}" width="10%" height="10%" alt="" style="border:2px solid black;">
 
 
                         
-                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #81ecec;">
+                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #1b789c;">
                         
                         ${comment.user.name} :
                          ${comment.content}
@@ -94,7 +94,7 @@ class PostComments{
                            
                             <small>
                             
-                                <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${comment._id}&type=Comment" style="text-decoration: none;color: blanchedalmond;"">
+                                <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${comment._id}&type=Comment" style="text-decoration: none;color: #1b789c;"">
                                 <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i> 0 Likes
                                 </a>
                             

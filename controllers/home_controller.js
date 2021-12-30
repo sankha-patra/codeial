@@ -6,10 +6,19 @@ module.exports.home=async function(req,res){
     console.log(req.cookies)
     try{
 
+
+        // myusers=[];
+        // myusers.push(req.params.id);
+        // for( f of req.user.friendships)
+        // {
+        //     myusers.push(f._id);
+        // }
+
         //populate the likes of each post and comment
 
          //populate the user of each post
     //populating multiple models comments,user of the comments
+
     let posts=await Post.find({})
     .populate("user")
     .populate({

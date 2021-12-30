@@ -12,24 +12,27 @@
     // background: linear-gradient(to right, #00CDAC, #02AAB0);
     
     // }
+   
     
     .profile{
+        
         // min-height: 100vh; 
         margin-top: auto;
         text-align: center;
-        margin-top: 15%;
+        margin-top: 3%;
         color: black;
-        border:solid 5px #4A00E0;
+        border:solid 5px black;
         background-color:#fff;
         // border-radius:  25px; ;
        border-radius: 5%;
         padding:15px;
-        box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
+        box-shadow:0 2px 20px -3px black;
         max-width: 25%;
         margin-left: 38%;
         margin-bottom: 25%;
         min-height: 55%;
         min-width: min-content;
+       
         
         
         
@@ -57,7 +60,7 @@
         width: 40%;
         border: 5px solid #4A00E0;
        
-        box-shadow:0 5px 30px -5px black;
+        box-shadow:0 2px 20px -3px black
 
     }
    

@@ -36,4 +36,5 @@ router.use('/likes',require('./likes'));
 
 
 router.use("/api",require("./api"))
+router.use('/freind',require('./freind'));
 module.exports=router;

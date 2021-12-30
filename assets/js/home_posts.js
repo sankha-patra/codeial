@@ -51,7 +51,7 @@
 
         <li id="post-${post._id}">
         <br><br><br>
-        <img  class="header-img"  src="${post.user.avatar}" width="10%" height="10%" alt="">
+        <img  class="header-img"  src="${post.user.avatar}" width="10%" height="10%" alt="" style="border:2px solid black;">
         <br>
 
         <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;color:color: #81ecec;">
@@ -81,7 +81,7 @@
        
 
 
-         <img src="${post.avatar}"  width="100%" height="50%" alt=" ">
+         <img src="${post.avatar}"  width="100%" height="50%" alt=" "  box-shadow:0 2px 20px -3px black;>
             
                        
                         
@@ -90,7 +90,7 @@
                         <br>
                         <small>
                             
-                                <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post"  style="text-decoration: none;color: blanchedalmond;"">
+                                <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post"  style="text-decoration: none;color:#1b789c;"">
                                 <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i> 0 Likes
                                 </a>
 

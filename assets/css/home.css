@@ -91,7 +91,7 @@
   bottom: 0;
   margin: auto;
   border: 7px solid;
-  border-color: transparent transparent #05004e white;
+  border-color: transparent transparent black #6c5ce7;
   width: 68px;
   height: 68px;
   border-radius: 50%;
@@ -102,7 +102,7 @@
 .loader::before {
   width: 58px;
   height: 58px;
-  border-color: white black transparent transparent;
+  border-color: #f96d00 #f96d00 transparent transparent;
   animation: rotation 1s linear infinite; }
 
 .loader {
@@ -112,7 +112,7 @@
   display: inline-block;
   position: relative;
   border: 7px solid;
-  border-color: black white transparent transparent;
+  border-color: black black transparent transparent;
   box-sizing: border-box;
   animation: rotation 1.2s linear infinite; }
 
@@ -144,13 +144,15 @@
 
 .whole {
   overflow: auto;
-  background-color: black;
+  background-color: white;
   margin-left: 20vh;
   width: 65%;
+  padding-top: 1%;
   padding-left: 1%;
   padding-right: 1%;
-  padding-bottom: 5%;
-  border: 4px solid #00bbf0;
+  padding-bottom: 2%;
+  box-shadow: 0 2px 20px -3px black;
+  border: 6px solid #1b789c;
   border-radius: 20px;
   margin-bottom: 50px; }
 
@@ -162,11 +164,11 @@
   animation-delay: 0s; }
 
 body {
-  background: #1A2980;
+  background: white;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+  background: -webkit-linear-gradient(to right, white, #00d4ff);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #26D0CE, #1A2980);
+  background: linear-gradient(to right, #fefefe, #00d4ff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0;
   font-weight: bolder;
@@ -187,7 +189,7 @@ body {
   border: 0;
   border-radius: 5px;
   display: inline;
-  box-shadow: 0 5px 30px -5px black; }
+  box-shadow: 0 2px 20px -3px black; }
 
 .button:focus {
   outline: 0; }
@@ -197,7 +199,7 @@ body {
   color: black;
   transition: 1ms;
   transition: ease-in;
-  box-shadow: 0 5px 30px -5px black; }
+  box-shadow: 0 2px 20px -3px black; }
 
 .form-control {
   position: relative;
@@ -206,7 +208,7 @@ body {
   padding-left: 2%;
   padding-right: 2%;
   width: 100%;
-  color: blanchedalmond; }
+  color: #1b789c; }
 
 .form_control input {
   background-color: transparent;
@@ -218,7 +220,7 @@ body {
   padding-right: 2%;
   font-size: 20px;
   overflow: hidden;
-  color: blanchedalmond; }
+  color: #1b789c; }
 
 .form_control input:focus,
 .form_control input:valid {
@@ -279,14 +281,14 @@ body {
     margin-left: 15%; }
   #home-container #user-friends {
     width: 15%;
-    border: solid 6px #ffcf7a;
+    border: solid 6px  #1b789c;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     min-height: 50vh;
     position: relative;
-    min-width: max-content;
+    min-width: min-content;
     margin-bottom: 0;
     color: #f96d00;
     padding-left: 5%;

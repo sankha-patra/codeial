@@ -22,7 +22,7 @@
 
 .navbar {
   color: black;
-  background-color: #6c5ce7;
+  background-color: black;
   height: 100px;
   margin-top: 0;
   margin-right: 0;
@@ -34,8 +34,6 @@
   position: relative;
   text-decoration: none;
   list-style: none; }
-  .navbar i {
-    color: black; }
   .navbar__logo {
     color: #222121;
     cursor: pointer;
@@ -121,7 +119,7 @@
         line-height: 1.5; } }
   .hero__container--left h1 {
     font-size: 4.2rem;
-    color: white; }
+    color: #6c5ce7; }
     @media screen and (max-width: 280px) {
       .hero__container--left h1 {
         font-size: 1.5rem; } }
@@ -133,7 +131,7 @@
         font-size: 2rem; } }
   .hero__container--left p {
     font-size: 2rem;
-    color: white;
+    color: #6c5ce7;
     margin-top: 1rem;
     font-weight: 700; }
     @media screen and (max-width: 280px) {

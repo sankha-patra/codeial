@@ -1,6 +1,7 @@
 const express=require("express");
 const router=express.Router();
 const passport=require("passport");
+const freindcontroler=require('../controllers/freindshipcontroller');
 
 
 const usersController=require("../controllers/users_controller");
@@ -45,6 +46,9 @@ router.post("/create-session",passport.authenticate(
 
 
 router.get("/sign-out",usersController.destroySession);
+
+
+router.get('/removefriend',freindcontroler.removeFreind);
 
 // router.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}))
 

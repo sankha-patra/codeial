@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/css/home.css">    
 
 <link rel="stylesheet" href="/css/chat_box.css">
+
        
 
         <% if (!locals.user) {%>
@@ -42,6 +43,9 @@
         </div>
       </div>
        <% } else {%>
+        <body style="background-image: url(images/g.jpg);background-size: cover;
+		background-position: center;
+		background-attachment: fixed;">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -54,7 +58,7 @@
           </script>
           <!-- <span class="looder"> -->
            
-             <i class="msg fas fa-comment-dots fa-5x" style="margin: 2%;margin-left: 50px;"></i>
+             <!-- <i class="msg fas fa-comment-dots fa-5x" style="margin: 2%;margin-left: 50px;"></i> -->
 
           <!-- </span> -->
          
@@ -78,7 +82,11 @@
           <h2>Let us know!!!!!!!</h2>
           <br>
           <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
-            <input type="file" name="avatar" placeholder="Profile Picture" required>
+            <!-- <input type="file" name="avatar" placeholder="Profile Picture" style="display:none;" required> -->
+            <div id='update-avatar'><span style="display: inline-block;"><h4>Avatar</h4></span>   <input type="file" name="avatar" id="img" style="display:none;">
+              <label id='avatar-inp' for="img"> <i class="fa fa-upload" aria-hidden="true"></i></label></div>
+              <input id='update-btn' type="submit" class="button"  value="Update">
+
             <div class="form_control">
 <!--             
               <input type="file" name="avatar" placeholder="Profile Picture" required> -->
@@ -89,7 +97,7 @@
           </div>
            
            
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="Add post">
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="Add post"> -->
          
           </form>
         </div>
@@ -103,15 +111,15 @@
 
 
 
-                <li style="color: #81ecec;;" id="post-<%= post._id %>">
+                <li style="color: #1b789c;" id="post-<%= post._id %>">
                   <br><br><br>
                   <p>
                    
-                    <img  class="header-img"  src="<%=post.user.avatar%>" width="10%" height="10%" alt="">
+                    <img  class="header-img"  src="<%=post.user.avatar%>" width="10%" height="10%" alt="" style="border:2px solid black;">
                     <br>
                     
                     
-                    <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;color: #81ecec;">
+                    <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;color: #1b789c;background-color: lightgray;">
                       <%= post.user.name %> : <%= post.content %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     
                      <% if  ( locals.user && locals.user.id == post.user.id){ %>
@@ -124,7 +132,7 @@
                      </div>
                    
  
-                    <img src="<%= post.avatar%>"  width="100%" height="100%" alt=" " style="background-size:cover">
+                    <img src="<%= post.avatar%>"  width="100%" height="100%" alt=" " style="background-size:cover"  box-shadow:0 2px 20px -3px black;>
                     <br>
                     
 
@@ -146,7 +154,7 @@
 
                         <br>
                         <% if(locals.user){ %>
-                          <a href="/likes/toggle/?id=<%= post._id%>&type=Post" class="toggle-like-button" data-likes="<%= post.likes.length %>" style="text-decoration: none;color: blanchedalmond;">
+                          <a href="/likes/toggle/?id=<%= post._id%>&type=Post" class="toggle-like-button" data-likes="<%= post.likes.length %>" style="text-decoration: none;color: #1b789c;">
                             <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i>
                             <%= post.likes.length %>&nbsp;likes
                           </a>
@@ -208,9 +216,9 @@
                         <br>
                        
                         <br>
-                        <img  class="header-img"  src="<%=comment.user.avatar%>" width="10%" height="10%" alt="" style="display: inline-block;">
+                        <img  class="header-img"  src="<%=comment.user.avatar%>" width="10%" height="10%" alt="" style="display: inline-block;padding-top: 0%;border:2px solid black;">
                         
-                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #81ecec;">
+                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #1b789c;background-color: lightgray">
                           
                           <%= comment.user.name %> :
 
@@ -244,7 +252,7 @@
                         <!-- display the likes of this comment if the user is logged in then show the link to toggle likese
                             else just show the count -->
                         <% if(locals.user){ %>
-                          <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" style="text-decoration: none;color: blanchedalmond;">
+                          <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" style="text-decoration: none;color: #1b789c;">
                             <!-- <%= comment.likes.length %>likes -->
                             <i class="fas fa-heart fa-2x" style="color: orangered;">&nbsp</i><%= comment.likes.length %>&nbsp;likes
                           </a>
@@ -279,11 +287,19 @@
             <br>
             <p>
               <!-- <img  class="header-img"  src="<%=u.avatar%>" width="2.5%" height="2.5%" alt=""> -->
-              <i class="fas fa-user" style="color:#ffcf7a; ;"></i>
+              <!-- <i class="fas fa-user fa-2x" style="color:#086a90;"></i> -->
+              <% if(u.avatar) {%>
+                <img src="<%=u.avatar%>" class="header-img" width="40" height="40">
+                <% }else{%>
+                  <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="40" height="40">
+                  <%}%>
 
              
 
               <a style="color:#ffcf7a; ;text-decoration:none;"  href="/users/profile/<%= u.id %>"><%= u.name%></a>
+              <div id='details'>
+              <!-- <a href="/users/removefriend/?id=<%=u._id%>&type=<%=locals.user.id %>"><button class='UnFriend'>UnFriend</button></a> -->
+            </div>
             </p>
 
             <% } %>
@@ -292,7 +308,7 @@
         </section>
 
         
-    <%- include('_chat_box') -%>
+   
       </div>
         <% }%>
        
