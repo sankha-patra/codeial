@@ -13,7 +13,7 @@ const usersPostController=require("../controllers/users_post_controller");
 router.get("/profile/:id",passport.checkAuthentication,usersController.profile)
 
 router.post("/update/:id",passport.checkAuthentication,usersController.update)
-
+router.get('/search',passport.checkAuthentication,usersController.search)
 
 router.get("/posts",usersController.posts)
 

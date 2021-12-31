@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<ul id="search-result" style="height: max-content;">
+<div style="min-height: 100vh;">
+<br>
+    <div style="padding: 2%;background-color: black;color: white;margin-left: 40%;width:20%;margin-top: 0%;border-bottom: 2px solid white;padding-left: 5%;padding-right: 0%;border:4px solid #f95959;border-radius: 15px;">
+    <% for (profile_user of users){%>
+        <br>
+        
+        <a href="/users/profile/<%=profile_user.id%>" style="text-decoration: none;color: #f95959;">
+            <li id='info'>
+                <div class='usercard col-lg-30'>
+                   
+                    
+                    <%if (profile_user.avatar) {%>
+                        <img class='header-image' src='<%=profile_user.avatar%> 'width="30%" height="30%" style="border-radius: 50%;border: 4px solid #f95959;">
+                    <%} else {%>
+                        <img class='header-image' src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" width="30%" height="30%" style="border-radius: 50%;border: 4px solid #f95959;">
+                    <%}%>   
+                
+                    <div class="desc">
+                        <h4 class='usercard-name'><%=profile_user.name%></h4>
+                    </div>
+                    
+                </div>     
+            </li>
+        </a>
+    <%}%>
+</div> 
+</div>  
+
+ </ul>

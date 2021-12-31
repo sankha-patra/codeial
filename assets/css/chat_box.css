@@ -43,7 +43,6 @@
         border-bottom-left-radius: 15px; }
   #user-chat-box #chat-message-input-container {
     border-top: 4px solid #6c5ce7;
-    box-shadow: 0 5px 30px -5px black;
     padding-top: 15px;
     height: 24%;
     width: 100%;

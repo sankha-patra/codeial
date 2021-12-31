@@ -72,47 +72,137 @@
                
                
                
-                <div class="FRND"style="animation: cubic-bezier(0.55, 0.085, 0.68, 0.53);background-color:#f95959;width:max-content;border-radius: 5px;padding: 2%;color: white;border: 2px solid black;margin-right:0% ;">
-                 
-                    <a class="nav-link" href="/users/friends" style="text-decoration: none;color: black;"><h3>My Friends</h3></a>
-                
-                  <br>
-                    <a class="nav-link" href="/users/friend-requests" style="text-decoration: none;color: black;"><h3>Friend Requests</h3></a>
-               <br>
-               
-                  <a class="nav-link" href="/friends/all" style="text-decoration: none;color: black;"><h3>Add Friend</h3></a>
-              
-
-                </div>
-              
                 
         
 
 
         <div id="home-container">
         <section id="feed-posts">
+          <div class="FRND"style="animation: cubic-bezier(0.55, 0.085, 0.68, 0.53);background-color:#f95959;width:max-content;border-radius: 5px;padding: 2%;color: white;border: 4px solid black;margin-right:0% ;">
+            <div class=".boxContainer" style=" margin: auto;
+                
+            position: relative;
+            width:min-content;
+            border-radius: 30px;
+            padding: 0px 2%;
+            background-color: white;
+           
+            border: 4px solid black; ">
+            
+                <table class="elementsContainer" style="width:100%; height:100%; vertical-align:middle;">
+                <tr>
+                    <td>
+
+                
+                <form id="search-form" action="/users/search"  method="GET">
+                    
+                        <input type="text" name="name" placeholder="Find People" required class="search" style="border: none;
+                        padding: 5%;
+                        border-radius: 50px;
+                        font-weight: 500;
+                        outline: none;
+                        ">
+                    </td>
+                    <td>
+                        <!-- <a type="submit" id="searchbtn"> <i class="fa fa-search" style="color: tomato;"></i></a> -->
+                        <button type="submit" id="searchbtn" style="background-color: transparent;border: 0px;"><i class="fa fa-search " style="color: tomato;"></i></button>
+                    </td>
+                </form>
+            
+            </tr>
+            </table>
+            </div>
+            <br>
+            
+            <a class="nav-link" href="/users/profile/<%= locals.user.id %>"style="text-decoration: none;color: black;">
+              <h3><img class="frnds-img" src="images/user.png" height="30px">
+                User:<%= locals.user.name %></h3></a>
+            <br>
+            
+           
+              <a class="nav-link" href="/users/friends" style="text-decoration: none;color: black;"><h3>
+                <img class="frnds-img" src="images/f.png" height="30px">
+                My Friends</h3></a>
+          
+            <br>
+              <a class="nav-link" href="/users/friend-requests" style="text-decoration: none;color: black;"><h3>
+                <img class="frnds-img" src="images/fr.png" height="30px">
+                Friend Requests</h3></a>
+         <br>
+         
+            <a class="nav-link" href="/friends/all" style="text-decoration: none;color: black;">
+              
+              <h3>
+                <img class="frnds-img" src="images/af.png" height="30px">
+                Add Friend</h3></a>
+        
+
+          </div>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <br><br>
           <!-- <span class="Loader"></span> -->
         <!-- posts section $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
          <div class="post-avatar">
            <br>
-          <h2> Whats in your mind <h2>
-          <h2><%= locals.user.name %> ???</h2>
-          <br>
-          <h2>Let us know!!!!!!!</h2>
-          <br>
+          <h2> Whats in your mind today <h2>
+           
           <form action="/posts/create" id="new-post-form" enctype="multipart/form-data" method="POST">
             <!-- <input type="file" name="avatar" placeholder="Profile Picture" style="display:none;" required> -->
-            <div id='update-avatar'><span style="display: inline-block;"><h4>Avatar</h4></span>   <input type="file" name="avatar" id="img" style="display:none;">
-              <label id='avatar-inp' for="img"> <i class="fa fa-upload fa-2x" aria-hidden="true"></i></label></div>
+            <input type="text" name="content"  placeholder="start typing....." required autofocus style="border:2px solid black;border-radius: 15px;background-color: white;  box-shadow:0 2px 20px -3px black;padding: 2%;"></textarea>
+            <div id='update-avatar'><span style="display: inline-block;"></span>   <input type="file" name="avatar" id="img" style="display:none;">
+              
+
+              
+              <h4 style="color: black;">Upload Avatar&nbsp;&nbsp;</h4>
+              <label id='avatar-inp' for="img"><img class="frnds-img" src="images/uo.png" height="35px"> </label></div>
+              <br>
               <input id='update-btn' type="submit" class="button"  value="Update">
 
             <div class="form_control">
 <!--             
               <input type="file" name="avatar" placeholder="Profile Picture" required> -->
               <!-- <label for="fileUpload">Upload file</label> -->
-              <br><br>
-            <input type="text" name="content"  placeholder="start typing....." required autofocus></textarea>
+              <br>
+           
+            <br>
+            <br>
             <br>
           </div>
            
@@ -134,8 +224,21 @@
                 <li style="color: #1b789c;" id="post-<%= post._id %>">
                   <br><br><br>
                   <p>
+                    <% if(post.user.avatar){ %>
+                      <img  class="header-img"  src="<%=post.user.avatar%>" width="10%" height="10%" alt="" style="border:2px solid black;">
+                     
+                 
+                  <% }else {%>
+                  
+                      <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="10%" height="10%" style="border:2px solid black;">
+                  <% } %>
+
+
+
+
+
                    
-                    <img  class="header-img"  src="<%=post.user.avatar%>" width="10%" height="10%" alt="" style="border:2px solid black;">
+                    
                     <br>
                     
                     
@@ -236,7 +339,27 @@
                         <br>
                        
                         <br>
-                        <img  class="header-img"  src="<%=comment.user.avatar%>" width="10%" height="10%" alt="" style="display: inline-block;padding-top: 0%;border:2px solid black;">
+                        <% if(comment.user.avatar){ %>
+                 
+                          <img  class="header-img"  src="<%=comment.user.avatar%>" width="10%" height="10%" alt="" style="display: inline-block;padding-top: 0%;border:2px solid black;">
+                     
+                      <% }else {%>
+                      
+                          <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="10%" height="10%" style="border:2px solid black;">
+                      <% } %>
+    
+
+
+
+
+
+
+
+
+
+
+
+                       
                         
                         <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #1b789c;background-color: lightgray">
                           

@@ -89,7 +89,7 @@ module.exports.renderPage = async function (req, res) {
       });
     // console.log(friends);
     return res.render("friends.ejs", {
-      title: "My Friends",
+      title: "Friends",
       friends: friends,
     });
   } catch (err) {
@@ -118,7 +118,7 @@ module.exports.friendRequests = async function (req, res) {
   // friends = await friends.populate('user', 'name avatar').execPopulate();
 
   return res.render("friend_requests.ejs", {
-    title: "Friend Requests",
+    title: "Requests",
     friendRequests: friends,
   });
 };

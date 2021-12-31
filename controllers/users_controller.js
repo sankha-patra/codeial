@@ -95,52 +95,43 @@ module.exports.profile = function(req, res){
 
 
 
+module.exports.search= async function(req,res)
+{ try{ 
 
+  console.log("hii")
+       
+      
+        const regex = new RegExp(escapeRegex(req.query.name), 'gi');
+        console.log("hii")
+        
 
+        let user=await User.find({name:regex});
+        console.log("hii")
+        if(user)
+        {
+        
 
+            return res.render('user_searchresult', {
+                title: 'Search Results',
+                users: user
+        });
+    }else{
+        req.flash('error','user not found');
+        return res.redirect('/');
+    }
+ 
 
+     }catch(err)
+     {
+         
+         return res.redirect('back');
+     }
+}
+// function for fuzzy search using regular expressions 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function escapeRegex(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 
 
