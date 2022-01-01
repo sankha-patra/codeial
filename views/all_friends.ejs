@@ -12,12 +12,12 @@
             
 
 
-            <div style="padding: 2%;background-color: black;color: white;margin-left: 40%;width:20%;margin-top: 0%;border: 2px solid #f95959;padding-left: 5%;padding-right: 0%;">
+            <div style="padding: 2%;background-color: #f95959;color: black;margin-left: 40%;width:20%;margin-top: 0%;border: 3px solid black;padding-left: 5%;padding-right: 0%;">
 <% if(user.avatar){ %>
     <img src="<%= user.avatar %>" width="20%" height="20%" style="border-radius: 50%;border: 2px solid black;">
 <% }else {%>
 
-    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="20%" height="20%">
+    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="20%" height="20% " style="border-radius: 50%;border: 2px solid black;">
 <% } %>
 <br>
 
@@ -25,7 +25,7 @@
 <span class="uname">
 
     
-    <a href="/users/profile/<%= user.id %>" style="text-decoration: none;color: white;"><%= user.name %></a>
+    <a href="/users/profile/<%= user.id %>" style="text-decoration: none;color: black;"><%= user.name %></a>
 
 </span>
 </div>

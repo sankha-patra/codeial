@@ -153,6 +153,7 @@ module.exports.update= async function(req,res){
           }
           
           user.name=req.body.name;
+          user.bio=req.body.bio;
           user.email=req.body.email;
 
           if(req.file){

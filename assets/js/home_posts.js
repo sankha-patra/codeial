@@ -50,11 +50,12 @@
         return $(`<div class="whole " id="p-${ post._id }">
 
         <li id="post-${post._id}">
-        <br><br><br>
-        <img  class="header-img"  src="${post.user.avatar}" width="10%" height="10%" alt="" style="border:2px solid black;">
+        <br>
+        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="10%" height="10%" style="border:2px solid black;">
+  
         <br>
 
-        <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #00bbf0 ;padding: 15px;color:color: #81ecec;">
+        <div class="pst" style="border-radius: 15px;align-items: center;display: inline-block ;padding: 15px;background-color:lightgrey;border:4px solid #1b789c">
          ${post.user.name} : 
          ${post.content}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -80,8 +81,8 @@
         
        
 
-
-         <img src="${post.avatar}"  width="100%" height="50%" alt=" "  box-shadow:0 2px 20px -3px black;>
+        <img src="${post.avatar}"  width="100%" height="100%" alt=" " style="background-size:cover;box-shadow:0 2px 20px -3px black;border-radius: 15px;border: 2px solid black;">
+         
             
                        
                         
@@ -103,11 +104,11 @@
                         
                             <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
 
-                            <div class="form_control" style="display:inline-block;">
+                            <div class="form_control" style="display:inline-block;width:50%;">
 
 
-                                <input type="text" name="content" placeholder="Write comment..." required>
                                 
+                                <input type="text" name="content" placeholder="Write comment..." required autofocus style="width: 100%;border:4px solid #1b789c ;border-radius: 15px;background-color: lightgray;padding: 2%;color:#1b789c ;">
                                 </div>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class="button" type="submit" value="Add Comment">

@@ -138,12 +138,13 @@ i:hover {
   width: 35%;
   padding: 1%;
   height: 42vmin;
+  position: static;
   border-radius: 4%;
   border: solid 6px  #1b789c;
   margin-bottom: 50px;
-  margin-left: 70vh;
+  margin-left: 30vh;
   margin-bottom: 20vh;
-  margin-top: 0.5%; }
+  margin-top: 10%; }
 
 .whole {
   overflow: auto;
@@ -156,7 +157,7 @@ i:hover {
   padding-bottom: 2%;
   box-shadow: 0 2px 20px -3px black;
   border: 6px solid #1b789c;
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: 50px; }
 
 .fa-heart:hover {
@@ -198,7 +199,7 @@ body {
   outline: 0; }
 
 .button:hover {
-  background: #f95959;
+  background: #42b883;
   color: black;
   transition: 1ms;
   transition: ease-in;
@@ -278,17 +279,16 @@ body {
 
 #home-container {
   display: flex;
+  flex-direction: row-reverse;
   height: auto; }
   #home-container #feed-posts {
     width: 90%;
     margin-left: 0%; }
   #home-container #user-friends {
     width: 15%;
-    border: solid 6px  #1b789c;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border: solid 4px  black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     min-height: max-content;
     position: relative;
     min-width: min-content;
@@ -297,7 +297,13 @@ body {
     padding-left: 5%;
     padding-right: 2.5%;
     text-decoration: none;
-    background-color: #4191b1;
+    color: white;
+    background: #0575E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-top: 0%; }
 
 input[type=file]::file-selector-button {
@@ -333,12 +339,12 @@ input[type=file]::file-selector-button:hover {
     border-radius: 10px;
     width: min-content;
     height: min-content;
-    margin-left: 7%; }
+    margin-left: 30%; }
   .whole {
     width: 80%;
     margin-bottom: 10%;
     align-content: center;
-    margin-left: 0%; }
+    margin-left: 15%; }
   #user-friends {
     width: 80%;
     align-content: center;

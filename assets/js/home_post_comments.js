@@ -66,15 +66,12 @@ class PostComments{
 
 
                         <p>
-                        <br>
-                        <br>
                        
-                       
-                        <img  class="header-img"  src="${comment.user.avatar}" width="10%" height="10%" alt="" style="border:2px solid black;">
-
+                      
+                        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="10%" height="10%" style="border:2px solid black;">
 
                         
-                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid lime ;padding: 15px;color: #1b789c;">
+                        <div class="cmnt" style="border-radius: 15px;align-items: center;display: inline-block;border: 4px solid #1b789c ;padding: 15px;background-color:lightgrey">
                         
                         ${comment.user.name} :
                          ${comment.content}

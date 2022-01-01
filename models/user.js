@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type:String
     },
+    bio:
+    {
+        type:String
+    },
     friends : [
       {
           type: mongoose.Schema.Types.ObjectId,

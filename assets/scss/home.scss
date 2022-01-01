@@ -182,6 +182,7 @@ i:hover{
   width: 35%;
   padding:1%;
   height: 42vmin;
+  position:static;
   
   border-radius: 4%;
   
@@ -195,10 +196,10 @@ i:hover{
   // border-radius: 100%;
  
   margin-bottom: 50px;
-  margin-left: 70vh;
+  margin-left: 30vh;
   // box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
   margin-bottom: 20vh;
-  margin-top: 0.5%;
+  margin-top: 10%;
   
 }
 .whole{
@@ -220,7 +221,7 @@ i:hover{
   box-shadow:0 2px 20px -3px black;
   border: 6px solid #1b789c;
   // border: 5px solid #f96d00;
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: 50px;
   // box-shadow:0 5px 30px -5px rgba(0, 0, 0, 2);
 
@@ -312,7 +313,7 @@ background: linear-gradient( to right ,rgba(254,254,254,1) , rgba(0,212,255,1));
   }
   .button:hover{
      
-      background: #f95959;
+      background: #42b883;
       color: black;
       transition: 1ms;
       transition: ease-in;
@@ -418,6 +419,7 @@ background: linear-gradient( to right ,rgba(254,254,254,1) , rgba(0,212,255,1));
 #home-container{
   // align-content: flex-start;
   display: flex;
+  flex-direction:row-reverse;
   // min-height: 100vh;
   height: auto;
   #feed-posts{
@@ -439,11 +441,11 @@ background: linear-gradient( to right ,rgba(254,254,254,1) , rgba(0,212,255,1));
     // border-top: 4px solid  #00bbf0;
     // border-bottom: 5px solid  #00bbf0;
 
-    border:solid 6px  #1b789c;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border:solid 4px  black;
+    
+    
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     min-height:max-content;
     position: relative;
     min-width:min-content;
@@ -457,8 +459,12 @@ background: linear-gradient( to right ,rgba(254,254,254,1) , rgba(0,212,255,1));
     padding-left:5%;
     padding-right: 2.5%;
     text-decoration: none;
+    color: white;
     // background-color: black;
-    background-color: #4191b1;
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     margin-top: 0%;
 
     
@@ -535,13 +541,13 @@ input[type=file]::file-selector-button:hover {
     border-radius: 10px;
     width: min-content;
     height: min-content;
-    margin-left: 7%;
+    margin-left: 30%;
   }
   .whole{
     width:80%;
     margin-bottom: 10%;
     align-content: center;
-    margin-left: 0%;
+    margin-left: 15%;
     // height: 100vh;
     // padding: 10px;
     // margin-left: 15%;
@@ -550,6 +556,7 @@ input[type=file]::file-selector-button:hover {
   #user-friends{
     width: 80%;
     align-content: center;
+    
     // margin-left: 0%;
     // border-radius: 10px;
     border-top-left-radius: 0%;
@@ -571,4 +578,6 @@ i:hover{
   color: black;
   background-color:#f95959 ;
 }
+
+
 

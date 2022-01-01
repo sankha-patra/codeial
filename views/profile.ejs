@@ -1,6 +1,8 @@
 
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/chat_box.css">
+    
+    
     <!-- <link rel="stylesheet" href="/css/home.css"> -->
     <!-- <h1>Codeial /Profile page</h1> -->
 
@@ -14,6 +16,11 @@
         });
       });
       </script>
+     <body style="  background: rgb(255,255,255);  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, rgba(255,255,255,1), rgba(0,212,255,1));  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient( to right ,rgba(254,254,254,1) , rgba(0,212,255,1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+         
+     
       <!-- <span class="looder"> -->
           
          <i class="msg fas fa-comment-dots fa-5x" style="margin: 2%;margin-left: 50px;"></i>
@@ -34,16 +41,61 @@
        <% }else{%>
          <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png" class='header-img' width="120" height="120" style="border:2px solid black;box-shadow:0 2px 20px -3px black;">
          <%}%>
-   <!-- <img class ="profilepic" src="<%=profile_user.avatar%>" > -->
-   <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-    Name:<%= profile_user.name %>
-   </p>
-   <% if(isFriend){ %>
+
+         
+   <% if(isFriend && user.id != profile_user.id){ %>
                
-    <h3 style="background-color: mediumspringgreen;">connected</h3>
+    <h3 style="background-color: mediumspringgreen;border-radius: 15px;border: 3px solid black;">connected</h3>
+   
 <% } %>
 
    
+
+<br>
+   <!-- <img class ="profilepic" src="<%=profile_user.avatar%>" > -->
+   <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;background: #f95959;border-radius: 10px;border: 3px solid black;margin-bottom: 2px;">
+    Name:<%= profile_user.name %>
+    
+       <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;background: #f95959;border-radius: 10px;border: 3px solid black;margin-bottom: 2px;">
+       Email : <%= profile_user.email %></p>
+
+
+       <% if(profile_user.bio) {%>
+           <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;background: #f95959;border-radius: 10px;border: 3px solid black;margin-bottom: 2px;">
+               Bio : <%=profile_user.bio%></p>
+
+          
+          <% }else{%>
+            
+            <%}%>
+   </p>
+   <br>
+   
+   <% if(locals.user && locals.user.id != profile_user.id){ %>
+    <a href="/friends/toggle-friend/<%= profile_user._id %>" class="button" role="button" style="text-decoration: none;">
+        <% if(isFriend){ %>
+           
+            Unfriend 
+        <% }else{ %>
+
+            <!-- for checking pending request -->
+
+            <% if(ispending){ %>
+               Request Pending
+          <%  }else{ %>
+
+            Add Friend   
+
+
+            <% } %>
+            
+         
+        <% } %>
+    </a>
+    
+<% } %>
+<br>
+<br>
 
 
 
@@ -64,18 +116,22 @@
                 <br>
                 <input type="email" name="email" placeholder="Email" value="<%=profile_user.email%>" required>
                 <br>
+                <input type="text" name="bio" placeholder="Add Bio">
+               <br>
                 <input type="file" name="avatar" placeholder="Profile Picture">
+                <br>
+                
             </div>
             <br>
             <br>
                 <input class="button" type="submit" value="Update">
                 <br>
             </form>
+            
             <%- include('_chat_box') -%>
-        
             <%}else{%>
                 		
-		
+                
 		<div id="user-chat-box" style="box-shadow:0 2px 20px -3px black;">
 			
             <ul id="chat-messages-list">
@@ -146,37 +202,7 @@
     </div>
     <br>
    
-    <% if(locals.user && locals.user.id != profile_user.id){ %>
-        <a href="/friends/toggle-friend/<%= profile_user._id %>" class="button" role="button" style="text-decoration: none;">
-            <% if(isFriend){ %>
-               
-                Unfriend 
-            <% }else{ %>
-
-                <!-- for checking pending request -->
-
-                <% if(ispending){ %>
-                   Request Pending
-              <%  }else{ %>
-
-                Add Friend   
-
-
-                <% } %>
-                
-             
-            <% } %>
-        </a>
-        
-    <% } %>
-    
-    
-    
-    
-
-
-
-
+   
 
 
 
@@ -189,11 +215,19 @@
 
 
                 <!-- show only profile info -->
-                <br><br>
-                <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >
-                 User : <%= profile_user.name %></p>
-                <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-                Email : <%= profile_user.email %></p>
+             
+                
+              
+
+
+
+
+
+
+
+
+
+
 
                 <%} %>
             </div>
@@ -212,6 +246,9 @@
             <p  style="padding: 1%;color: black;">You can add / remove friends as well</p>
             <p style="padding: 1%;color: #f95959;">You can chat with your friends using chatroom.</p>
     </div>
+
+
+</body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
  
