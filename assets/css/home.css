@@ -296,6 +296,7 @@ body {
     color: #f96d00;
     padding-left: 5%;
     padding-right: 2.5%;
+    padding-bottom: 2%;
     text-decoration: none;
     color: white;
     background: #0575E6;
@@ -350,7 +351,7 @@ input[type=file]::file-selector-button:hover {
     align-content: center;
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
-    margin-left: 22%; } }
+    margin-left: 0%; } }
 
 i:hover {
   color: #f95959; }
