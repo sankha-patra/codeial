@@ -24,7 +24,12 @@
         padding-right: 35px;
         color: black;
         box-shadow: 3px 3px 3px 3px lightslategray;
-        background-color: #58d258;
+        background: #11998e;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #38ef7d, #11998e);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px; }
@@ -36,12 +41,18 @@
         padding: 15px;
         padding-left: 35px;
         color: black;
-        background-color: #00bbf0;
+        background: #00c6ff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0072ff, #00c6ff);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         margin-bottom: 1.2%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         border-bottom-left-radius: 15px; }
   #user-chat-box #chat-message-input-container {
+    padding-top: 2.5%;
     border-top: 4px solid #6c5ce7;
     padding-top: 15px;
     height: 24%;

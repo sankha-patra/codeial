@@ -185,21 +185,32 @@ body {
   cursor: pointer;
   margin-top: 5px;
   display: inline-block;
-  background: #00bbf0;
+  background: #00c6ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   padding: 5px;
   font-family: inherit;
   font-size: 15px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   display: inline;
+  padding: 2%;
   box-shadow: 0 2px 20px -3px black; }
 
 .button:focus {
   outline: 0; }
 
 .button:hover {
-  background: #42b883;
+  background: #11998e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: black;
   transition: 1ms;
   transition: ease-in;
@@ -299,11 +310,11 @@ body {
     padding-bottom: 2%;
     text-decoration: none;
     color: white;
-    background: #0575E6;
+    background: #00c6ff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #0072ff, #00c6ff);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-top: 0%; }
 
