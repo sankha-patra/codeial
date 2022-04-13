@@ -149,7 +149,7 @@
                     &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspHii Codeial here !!! -->
                 </h2>
                 <br>
-                <div style="padding-left: 2%;">
+                <!-- <div style="padding-left: 2%;">
                     <% if(profile_user.avatar) {%>
                          <img class ="header-img" src="<%=profile_user.avatar%>" width="60" height="60" style="border:2px solid black;box-shadow:0 2px 20px -3px black;">
                         
@@ -158,16 +158,16 @@
                           <%}%>
                    
                 </div>
-               
+                -->
                
                 
                 
                 <p style="padding-left: 2%;">
-                    Say hii
+                    Chat
 
                 </p>
                 <p style="padding-left: 2%;">
-                    to <%= profile_user.name %>
+                    with friends who are online
                 
 
                 </p>
@@ -204,32 +204,10 @@
     </div>
     <br>
    
-   
-
-
-
-
-
-
-
-
-
-
 
                 <!-- show only profile info -->
              
-                
-              
-
-
-
-
-
-
-
-
-
-
+             
 
                 <%} %>
             </div>
@@ -256,9 +234,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
  
 <script src="/js/chat_engine.js"></script>
-<% if (locals.user){ %>
+<% if (profile_user){ %>
   <script>
-      new ChatEngine('user-chat-box', '<%= locals.user.name %>')
+      new ChatEngine('user-chat-box', '<%=profile_user.name %>')
   </script>
   <% } %>
 
